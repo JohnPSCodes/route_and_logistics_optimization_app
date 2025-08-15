@@ -1,0 +1,101 @@
+name,planned_date,status,created_by_id
+Ruta Rápida 1,2025-08-26,planned,3
+Ruta Rápida 2,2025-08-27,in_progress,2
+Ruta Marina,2025-08-28,completed,4
+Ruta Interior,2025-08-29,planned,1
+Ruta Industrial,2025-08-30,in_progress,5
+Ruta Comercial,2025-08-31,completed,2
+Ruta Turística,2025-09-01,planned,3
+Ruta Cultural,2025-09-02,planned,4
+Ruta Educativa,2025-09-03,in_progress,1
+Ruta Histórica,2025-09-04,completed,2
+Ruta Verde,2025-09-05,planned,3
+Ruta Azul,2025-09-06,in_progress,4
+Ruta Roja,2025-09-07,completed,5
+Ruta Blanca,2025-09-08,planned,1
+Ruta Amarilla,2025-09-09,in_progress,2
+Ruta Plateada,2025-09-10,completed,3
+Ruta Dorada,2025-09-11,planned,4
+Ruta Central 2,2025-09-12,in_progress,5
+Ruta Expreso 3,2025-09-13,completed,1
+Ruta Expreso 4,2025-09-14,planned,2
+Ruta Delta,2025-09-15,planned,3
+Ruta Alfa,2025-09-16,in_progress,2
+Ruta Beta,2025-09-17,completed,4
+Ruta Gamma,2025-09-18,planned,1
+Ruta Omega,2025-09-19,in_progress,5
+Ruta Sigma,2025-09-20,completed,2
+Ruta Theta,2025-09-21,planned,3
+Ruta Lambda,2025-09-22,planned,4
+Ruta Kappa,2025-09-23,in_progress,1
+Ruta Zeta,2025-09-24,completed,2
+Ruta Eta,2025-09-25,planned,3
+Ruta Iota,2025-09-26,in_progress,4
+Ruta Nu,2025-09-27,completed,5
+Ruta Xi,2025-09-28,planned,1
+Ruta Omicron,2025-09-29,in_progress,2
+Ruta Pi,2025-09-30,completed,3
+Ruta Rho,2025-10-01,planned,4
+Ruta Tau,2025-10-02,in_progress,5
+Ruta Upsilon,2025-10-03,completed,1
+Ruta Phi,2025-10-04,planned,2
+Ruta Chi,2025-10-05,in_progress,3
+Ruta Psi,2025-10-06,completed,4
+Ruta Alpha 2,2025-10-07,planned,5
+Ruta Beta 2,2025-10-08,in_progress,1
+Ruta Gamma 2,2025-10-09,completed,2
+Ruta Delta 2,2025-10-10,planned,3
+Ruta Epsilon,2025-10-11,in_progress,4
+Ruta Zeta 2,2025-10-12,completed,5
+Ruta Eta 2,2025-10-13,planned,1
+Ruta Theta 2,2025-10-14,in_progress,2
+Ruta Iota 2,2025-10-15,completed,3
+Ruta Kappa 2,2025-10-16,planned,4
+Ruta Lambda 2,2025-10-17,in_progress,5
+Ruta Mu,2025-10-18,completed,1
+Ruta Nu 2,2025-10-19,planned,2
+Ruta Xi 2,2025-10-20,in_progress,3
+Ruta Omicron 2,2025-10-21,completed,4
+Ruta Pi 2,2025-10-22,planned,5
+Ruta Rho 2,2025-10-23,in_progress,1
+Ruta Tau 2,2025-10-24,completed,2
+Ruta Upsilon 2,2025-10-25,planned,3
+Ruta Phi 2,2025-10-26,in_progress,4
+Ruta Chi 2,2025-10-27,completed,5
+Ruta Psi 2,2025-10-28,planned,1
+Ruta Alpha 3,2025-10-29,in_progress,2
+Ruta Beta 3,2025-10-30,completed,3
+Ruta Gamma 3,2025-10-31,planned,4
+Ruta Delta 3,2025-11-01,in_progress,5
+Ruta Epsilon 2,2025-11-02,completed,1
+Ruta Zeta 3,2025-11-03,planned,2
+Ruta Eta 3,2025-11-04,in_progress,3
+Ruta Theta 3,2025-11-05,completed,4
+Ruta Iota 3,2025-11-06,planned,5
+Ruta Kappa 3,2025-11-07,in_progress,1
+Ruta Lambda 3,2025-11-08,completed,2
+Ruta Mu 2,2025-11-09,planned,3
+Ruta Nu 3,2025-11-10,in_progress,4
+Ruta Xi 3,2025-11-11,completed,5
+Ruta Omicron 3,2025-11-12,planned,1
+Ruta Pi 3,2025-11-13,in_progress,2
+Ruta Rho 3,2025-11-14,completed,3
+Ruta Sigma 3,2025-11-15,planned,4
+Ruta Tau 3,2025-11-16,in_progress,5
+Ruta Upsilon 3,2025-11-17,completed,1
+Ruta Phi 3,2025-11-18,planned,2
+Ruta Chi 3,2025-11-19,in_progress,3
+Ruta Psi 3,2025-11-20,completed,4
+Ruta Alpha 4,2025-11-21,planned,5
+Ruta Beta 4,2025-11-22,in_progress,1
+Ruta Gamma 4,2025-11-23,completed,2
+Ruta Delta 4,2025-11-24,planned,3
+Ruta Epsilon 3,2025-11-25,in_progress,4
+Ruta Zeta 4,2025-11-26,completed,5
+Ruta Eta 4,2025-11-27,planned,1
+Ruta Theta 4,2025-11-28,in_progress,2
+Ruta Iota 4,2025-11-29,completed,3
+Ruta Kappa 4,2025-11-30,planned,4
+Ruta Lambda 4,2025-12-01,in_progress,5
+Ruta Mu 3,2025-12-02,completed,1
+Ruta Nu 4,2025-12-03,planned,2
