@@ -1,3 +1,4 @@
+
 import tkinter as tk
 from tkinter import ttk
 from apps.frontend.gui_app.views.dashboard_frame import DashboardFrame
@@ -5,6 +6,7 @@ from apps.frontend.gui_app.views.routes_frame import RoutesFrame
 from apps.frontend.gui_app.views.orders_frame import OrderFrame
 from apps.frontend.gui_app.views.configuration_frame import ConfigFrame
 from apps.frontend.gui_app.views.user_frame import UserFrame
+from apps.frontend.gui_app.views.menu_bar import MenuBar
 
 class MainApp(tk.Tk):
     def __init__(self):
@@ -12,6 +14,9 @@ class MainApp(tk.Tk):
         self.title("DEMO Route and Logistics")
         self.geometry("1000x600") # to determine later
         self.config(bg="#f0f0f0")
+
+        # --------- MenuBar --------
+        MenuBar(self)
 
         self.grid_columnconfigure(1,weight=1)
         self.grid_rowconfigure(0,weight=1)
