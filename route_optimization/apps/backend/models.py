@@ -11,7 +11,7 @@ class User(models.Model):
     password_hash = models.TextField()
 
     def __str__(self):
-        return f"{self.name} < {self.email}"
+        return f"{self.name} < {self.email} >"
 
 class Order(models.Model):
     STATUS_CHOICES = [
