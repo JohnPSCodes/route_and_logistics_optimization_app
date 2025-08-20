@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
-from route_optimization.config_user import DB_ENGINE, DB_NAME, DB_USER, DB_PASSW
+from route_optimization.config_user import DB_ENGINE, DB_NAME, DB_USER, DB_PASSW , SECRET_KEY_DJANGO
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-akjvybf$e(9*-a((@rhcv#((6#$%$&f89^j(!!^3v=xc7-puvy'
+SECRET_KEY = SECRET_KEY_DJANGO
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -131,6 +132,13 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ]
+}
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(hours=5),   # default 5 minutes
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),   # default 1 day
+    "ROTATE_REFRESH_TOKENS": False,              
+    "BLACKLIST_AFTER_ROTATION": True, 
 }
 
 DATABASES = {
