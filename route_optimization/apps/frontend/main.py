@@ -1,6 +1,7 @@
 
 import tkinter as tk
 from tkinter import ttk
+from apps.frontend.resources.resources import load_logo
 from apps.frontend.gui_app.views.dashboard_frame import DashboardFrame
 from apps.frontend.gui_app.views.routes_frame import RoutesFrame
 from apps.frontend.gui_app.views.orders_frame import OrderFrame
@@ -12,52 +13,69 @@ class MainApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("DEMO Route and Logistics")
-        self.geometry("1000x600") # to determine later
+        self.geometry("830x600")
+        self.minsize(830,600)
+        self.maxsize(830,600)
         self.config(bg="#f0f0f0")
 
         # --------- MenuBar --------
         MenuBar(self)
 
-        self.grid_columnconfigure(1,weight=1)
-        self.grid_rowconfigure(0,weight=1)
+        self.grid_columnconfigure(1, weight=1)
+        self.grid_rowconfigure(0, weight=1)
 
         # ------- SidePanel ------------
-        sidepanel = tk.Frame(self,bg="#2c3e50",width=200)
-        sidepanel.grid(row=0,column=0,sticky="ns")
-        sidepanel.grid_propagate(False) # set width
+        sidepanel = tk.Frame(self, bg="#2c3e50", width=150)
+        sidepanel.grid(row=0, column=0, sticky="ns")
+        sidepanel.grid_propagate(False)
 
-        # ---------- Navigation Buttoms -------------
-        ttk.Button(sidepanel,text="Home Dashboard",command=lambda: self.show_frame("DashboardFrame")
-                   ).pack(fill="x",pady=5,padx=10)
-        ttk.Button(sidepanel,text="Manage Routes",command=lambda: self.show_frame("RoutesFrame")
-                   ).pack(fill="x",pady=5,padx=10)
-        ttk.Button(sidepanel,text="Order logs",command=lambda: self.show_frame("OrderFrame")
-                   ).pack(fill="x",pady=5,padx=10)
-        ttk.Button(sidepanel,text="Configuration",command=lambda: self.show_frame("ConfigFrame")
-                   ).pack(fill="x",pady=5,padx=10)
-        ttk.Button(sidepanel,text="User/Client",command=lambda: self.show_frame("UserFrame")
-                   ).pack(fill="x",pady=5,padx=10)
+        # Configure rows
+        sidepanel.grid_rowconfigure(0, weight=1)  # logo row
+        sidepanel.grid_rowconfigure(1, weight=1)  # buttons row (takes remaining space)
+        sidepanel.grid_columnconfigure(0, weight=1)
 
-        # views container
-        container = tk.Frame(self,bg="#f0f0f0")
-        container.grid(row=0,column=1,sticky="nsew")
+        # ------- Logo ----------
+        logo_label = load_logo(width=100, height=100)
+        logo_label.grid(row=0, column=0, pady=(10), sticky="n")
 
-        # frames dict
+        # ------- Navigation Buttons ----------
+        buttons_frame = tk.Frame(sidepanel, bg="#2c3e50")
+        buttons_frame.grid(row=1, column=0, sticky="n",pady=(410,5))  # sticky north keeps buttons arriba
+        buttons_frame.grid_columnconfigure(0, weight=1)
+
+        buttons = [
+            ("Home Dashboard", "DashboardFrame"),
+            ("Manage Routes", "RoutesFrame"),
+            ("Order logs", "OrderFrame"),
+            ("Configuration", "ConfigFrame"),
+            ("User/Client", "UserFrame")
+        ]
+
+        for i, (text, frame_name) in enumerate(buttons):
+            btn = ttk.Button(buttons_frame, text=text, command=lambda f=frame_name: self.show_frame(f))
+            btn.grid(row=i, column=0, sticky="ew", pady=(5, 0),padx=10)
+
+
+        # ------- Views Container ----------
+        container = tk.Frame(self, bg="#f0f0f0")
+        container.grid(row=0, column=1, sticky="nsew")
+        container.grid_rowconfigure(0, weight=1)
+        container.grid_columnconfigure(0, weight=1)
+
+        # ------- Frames Dict ----------
         self.frames = {}
-
-        for F in (DashboardFrame,RoutesFrame,OrderFrame,ConfigFrame,UserFrame):
-            frame = F(container,self)
+        for F in (DashboardFrame, RoutesFrame, OrderFrame, ConfigFrame, UserFrame):
+            frame = F(container, self)
             self.frames[F.__name__] = frame
-            frame.grid(row=0,column=0,sticky="nsew")
+            frame.grid(row=0, column=0, sticky="nsew")
 
-
-        # Set the dashboard as default
+        # Default frame
         self.show_frame("DashboardFrame")
 
-
-    def show_frame(self,name):
+    def show_frame(self, name):
         frame = self.frames[name]
-        frame.tkraise() # bring the frame to the front
+        frame.tkraise()
+    
 
 if __name__ == "__main__":
     app = MainApp()
