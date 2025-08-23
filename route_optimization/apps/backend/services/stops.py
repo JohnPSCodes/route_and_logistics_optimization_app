@@ -67,3 +67,5 @@ def get_stop(stop_id): # ✅ tested
 def get_all_stop(): # ✅ tested
     return list(Stop.objects.all())
 
+def get_route_stops(route_id):
+    return list(Stop.objects.filter(route_id=route_id).order_by("stop_order"))
