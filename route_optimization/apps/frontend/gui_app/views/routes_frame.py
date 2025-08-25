@@ -5,6 +5,10 @@ from route_optimization.config_user import GOOGLE_API_KEY
 from apps.frontend.gui_app.views.top_level_views.add_way_point_top_level import AddWaypointTopLevel
 from apps.backend.services.stops import get_route_stops
 from apps.backend.services.routes import get_all_route
+from apps.frontend.gui_app.views.top_level_views.delete_stop_top_level import DeleteStopTopLevel
+from apps.frontend.gui_app.views.top_level_views.see_all_routes_top_level import SeeAllRoutesTopLevel
+from apps.frontend.gui_app.views.top_level_views.assign_route_top_level import AssignRouteTopLevel
+from apps.backend.services.routes_info import get_full_route_info
 import webbrowser
 
 class RoutesFrame(tk.Frame):
@@ -14,13 +18,14 @@ class RoutesFrame(tk.Frame):
         self.current_route_id = None
 
         # ---------- Grid config ----------
-        self.grid_rowconfigure(2, weight=3)  # Mapa crece
-        self.grid_rowconfigure(3, weight=1)  # Treeview crece
-        self.grid_rowconfigure(4, weight=0)  # Botones fijos
+        self.grid_rowconfigure(2, weight=3)
+        self.grid_rowconfigure(3, weight=1)
+        self.grid_rowconfigure(4, weight=0)
         self.grid_columnconfigure(0, weight=1)
 
         # ---------- Top label ----------
-        tk.Label(self, text="Routes", font=("Arial", 18), bg="white").grid(row=0, column=0, sticky="nw", padx=10, pady=10)
+        tk.Label(self, text="Routes", font=("Arial", 18), bg="white")\
+            .grid(row=0, column=0, sticky="nw", padx=10, pady=10)
 
         # ---------- Route selection Combobox ----------
         frame_route = tk.Frame(self, bg="white")
@@ -37,15 +42,30 @@ class RoutesFrame(tk.Frame):
             self.combobox_routes.current(0)
         self.combobox_routes.bind("<<ComboboxSelected>>", self.on_route_selected)
 
-        # ---------- Map container ----------
-        self.map_container = tk.Frame(self, bg="lightgray")
-        self.map_container.grid(row=2, column=0, sticky="nsew", padx=20, pady=5)
-        self.map_container.grid_rowconfigure(0, weight=1)
-        self.map_container.grid_columnconfigure(0, weight=1)
+        # ---------- Map + Info container ----------
+        self.map_info_container = tk.Frame(self)
+        self.map_info_container.grid(row=2, column=0, sticky="nsew", padx=20, pady=5)
+        self.map_info_container.grid_columnconfigure(0, weight=3)
+        self.map_info_container.grid_columnconfigure(1, weight=1)
+        self.map_info_container.grid_rowconfigure(0, weight=1)
 
+        # ---------- Map container ----------
+        self.map_container = tk.Frame(self.map_info_container, bg="lightgray")
+        self.map_container.grid(row=0, column=0, sticky="nsew")
         self.map_canvas = tk.Canvas(self.map_container, bg="lightblue")
-        self.map_canvas.grid(row=0, column=0, sticky="nsew")
+        self.map_canvas.pack(fill="both", expand=True)
         self.map_canvas.bind("<Configure>", lambda e: self.load_map())
+
+        # ---------- Info panel ----------
+        self.info_frame = tk.Frame(self.map_info_container, bg="white", bd=1, relief="solid")
+        self.info_frame.grid(row=0, column=1, sticky="nsew", padx=(10,0))
+        self.info_labels = {}
+        info_fields = ["Name", "Driver", "Stops", "Completed Stops", "Estimated Duration"]
+        for i, field in enumerate(info_fields):
+            tk.Label(self.info_frame, text=field+":", anchor="w", bg="white", font=("Arial", 10, "bold"))\
+                .grid(row=i, column=0, sticky="w", padx=5, pady=2)
+            self.info_labels[field] = tk.Label(self.info_frame, text="", anchor="w", bg="white")
+            self.info_labels[field].grid(row=i, column=1, sticky="w", padx=5, pady=2)
 
         # ---------- Stops Treeview ----------
         self.stops_tree = ttk.Treeview(self, columns=("stop_order","customer","lat","lng","eta","delivered"), show="headings", height=6)
@@ -70,7 +90,7 @@ class RoutesFrame(tk.Frame):
         ttk.Button(buttons_container, text="Delete waypoint(stop)", command=self.delete_waypoint).grid(row=0, column=1, padx=5, pady=5, sticky="ew")
         ttk.Button(buttons_container, text="Load route", command=self.load_route).grid(row=0, column=2, padx=5, pady=5, sticky="ew")
         ttk.Button(buttons_container, text="See all routes", command=self.see_all_routes).grid(row=1, column=0, padx=5, pady=5, sticky="ew")
-        ttk.Button(buttons_container, text="Open MAP (eliminate)", command=self.load_map).grid(row=1, column=1, padx=5, pady=5, sticky="ew")
+        ttk.Button(buttons_container, text="Open MAP (eliminate)", command=self.refresh_all).grid(row=1, column=1, padx=5, pady=5, sticky="ew")
         ttk.Button(buttons_container, text="Assign route", command=self.assign_route).grid(row=1, column=2, padx=5, pady=5, sticky="ew")
 
         # Cargar primer route si existe
@@ -83,6 +103,7 @@ class RoutesFrame(tk.Frame):
         route_name = self.route_var.get()
         if route_name in self.route_map:
             self.current_route_id = self.route_map[route_name]
+            self.route_var.set(route_name)
             self.refresh_all()
 
     # ---------- Map handling ----------
@@ -119,10 +140,27 @@ class RoutesFrame(tk.Frame):
                 "Yes" if s.delivered else "No"
             ))
 
+    # ---------- Refresh route info ----------
+    def refresh_route_info(self):
+        if self.current_route_id is None:
+            for lbl in self.info_labels.values():
+                lbl.config(text="N/A")
+            return
+
+        info = get_full_route_info(self.current_route_id)
+        self.info_labels["Name"].config(text=self.route_var.get())
+        self.info_labels["Driver"].config(text=info["driver"])
+        self.info_labels["Stops"].config(text=info["total_stops"])
+        self.info_labels["Completed Stops"].config(text=info["completed_stops"])
+        self.info_labels["Estimated Duration"].config(
+            text=f"{info['duration_str']} / {info['distance_km']} km"
+        )
+
     # ---------- Refresh everything ----------
     def refresh_all(self):
         self.load_map()
         self.refresh_stops_list()
+        self.refresh_route_info()
 
     # ---------- Button actions ----------
     def add_waypoint(self):
@@ -132,10 +170,12 @@ class RoutesFrame(tk.Frame):
         AddWaypointTopLevel(self, route_id=self.current_route_id, refresh_callback=self.refresh_all)
 
     def delete_waypoint(self):
-        messagebox.showinfo("Info", "Delete waypoint not implemented yet.")
+        if self.current_route_id is None:
+            messagebox.showwarning("Warning", "Please select a route first.")
+            return
+        DeleteStopTopLevel(self, route_id=self.current_route_id, refresh_callback=self.refresh_all)
 
     def load_route(self):
-        """Abre Google Maps con todos los stops de la ruta seleccionada"""
         if self.current_route_id is None:
             messagebox.showwarning("Warning", "Please select a route first.")
             return
@@ -157,7 +197,7 @@ class RoutesFrame(tk.Frame):
             messagebox.showerror("Error", f"No se pudo abrir Google Maps: {e}")
 
     def see_all_routes(self):
-        messagebox.showinfo("Info", "See all routes not implemented yet.")
+        SeeAllRoutesTopLevel(self)
 
     def assign_route(self):
-        messagebox.showinfo("Info", "Assign route not implemented yet.")
+        AssignRouteTopLevel(self)
