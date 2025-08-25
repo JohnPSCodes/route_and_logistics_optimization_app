@@ -4,7 +4,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'route_optimization.settings')
 django.setup()
 
-from apps.backend.models import Route,User
+from apps.backend.models import Route,User,Driver
 
 
 def create_route(data:dict): # ✅ tested, add decorator for validations and authorized actions
@@ -54,3 +54,10 @@ def get_route(route_id): # ✅ tested
 def get_all_route(): # ✅ tested
     return list(Route.objects.all())
 
+
+def assign_route(route_id, driver_id):  # ✅ tested
+    route = Route.objects.get(pk=route_id)
+    driver = Driver.objects.get(pk=driver_id)
+    route.driver = driver
+    route.save()
+    return route
