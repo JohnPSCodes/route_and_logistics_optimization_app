@@ -48,6 +48,13 @@ class Route(models.Model):
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='planned')
 
+    driver = models.ForeignKey(
+        "Driver", 
+        on_delete=models.SET_NULL,  
+        null=True, blank=True,      
+        related_name="routes"   
+    )
+
     def __str__(self):
         return f"{self.name} ({self.planned_date})"
     
@@ -69,3 +76,11 @@ class Stop(models.Model):
 
     def __str__(self):
         return f"Stop {self.stop_order} - Route: {self.route.name} - Order ID: {self.order.id}"
+
+class Driver(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE,related_name="driver_profile")
+    license_number = models.CharField(max_length=100,blank=True,null=True)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.user.name
