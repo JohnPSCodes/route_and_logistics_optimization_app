@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import requests
 from route_optimization.config_user import JWT_TOKEN, API_URL_ORDERS
+from apps.frontend.gui_app.utils.windows_utils import center_window
 
 class DeleteOrderTopLevel(tk.Toplevel):
     def __init__(self, parent, order_data, callback):
@@ -17,6 +18,7 @@ class DeleteOrderTopLevel(tk.Toplevel):
         self.title(f"Delete Order {self.order_id}")
         self.geometry("350x200")
         self.resizable(False, False)
+        center_window(self)
 
         # Mensaje de confirmación
         msg = f"Are you sure you want to delete Order {self.order_id}?\nCustomer: {order_data.get('customer_name')}"
