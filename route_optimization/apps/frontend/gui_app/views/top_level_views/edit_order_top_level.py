@@ -3,8 +3,10 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from tkcalendar import DateEntry
 import requests
+from apps.frontend.gui_app.utils.windows_utils import center_window
 from route_optimization.config_user import JWT_TOKEN, API_URL_ORDERS
 from datetime import datetime
+
 
 class EditOrderTopLevel(tk.Toplevel):
     def __init__(self, parent, order_data, callback):
@@ -19,6 +21,7 @@ class EditOrderTopLevel(tk.Toplevel):
         self.title(f"Edit Order {self.order_id}")
         self.geometry("400x500")
         self.resizable(False, False)
+        center_window(self)
 
         self._build_form(order_data)
 
