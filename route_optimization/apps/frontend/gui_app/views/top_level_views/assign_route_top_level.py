@@ -2,12 +2,14 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from apps.backend.models import Route, Driver
 from apps.backend.services.routes import assign_route
+from apps.frontend.gui_app.utils.windows_utils import center_window
 
 class AssignRouteTopLevel(tk.Toplevel):
     def __init__(self, parent):
         super().__init__(parent)
         self.title("Assign Route to Driver")
         self.geometry("400x250")
+        center_window(self)
 
         # Rutas
         tk.Label(self, text="Select Route:").pack(pady=5)
