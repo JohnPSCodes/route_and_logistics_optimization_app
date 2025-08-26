@@ -4,6 +4,7 @@ from tkinter import ttk, messagebox
 from tkcalendar import DateEntry
 from datetime import date
 from apps.backend.services.routes import create_route
+from apps.frontend.gui_app.utils.windows_utils import center_window
 
 class AddRouteTopLevel(tk.Toplevel):
     """
@@ -22,6 +23,7 @@ class AddRouteTopLevel(tk.Toplevel):
         self.resizable(False, False)
         self.created_by_id = created_by_id
         self.refresh_callback = refresh_callback
+        center_window(self)
 
         # Opcional: comportamiento modal
         self.transient(parent)
