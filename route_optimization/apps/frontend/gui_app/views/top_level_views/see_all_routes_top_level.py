@@ -5,6 +5,7 @@ from apps.backend.services.routes import get_all_route
 from apps.frontend.gui_app.views.top_level_views.add_route_top_level import AddRouteTopLevel
 from apps.frontend.gui_app.views.top_level_views.edit_route_top_level import EditRouteTopLevel
 from apps.frontend.gui_app.views.top_level_views.delete_route_top_level import DeleteRouteTopLevel
+from apps.frontend.gui_app.utils.windows_utils import center_window
 
 class SeeAllRoutesTopLevel(tk.Toplevel):
     def __init__(self, parent, refresh_callback=None):
@@ -12,6 +13,7 @@ class SeeAllRoutesTopLevel(tk.Toplevel):
         self.title("Manage Routes")
         self.geometry("600x400")
         self.refresh_callback = refresh_callback
+        center_window(self)
 
         # Treeview
         self.tree = ttk.Treeview(self, columns=("id", "name", "planned_date"), show="headings")
