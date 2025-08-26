@@ -4,6 +4,7 @@ from tkinter import ttk, messagebox
 from tkcalendar import DateEntry
 import requests
 from route_optimization.config_user import JWT_TOKEN, API_URL_ORDERS
+from apps.frontend.gui_app.utils.windows_utils import center_window
 
 class CreateOrderTopLevel(tk.Toplevel):
     def __init__(self, parent, callback):
@@ -12,6 +13,7 @@ class CreateOrderTopLevel(tk.Toplevel):
         self.title("Create Order")
         self.geometry("400x500")
         self.resizable(False, False)
+        center_window(self)
 
         # ----------------- Campos del formulario -----------------
         self._build_form()
