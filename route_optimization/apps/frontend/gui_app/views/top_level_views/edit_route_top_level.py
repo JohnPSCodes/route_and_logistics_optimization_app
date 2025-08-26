@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from tkcalendar import DateEntry
 from apps.backend.services.routes import get_route, update_route
+from apps.frontend.gui_app.utils.windows_utils import center_window
 
 class EditRouteTopLevel(tk.Toplevel):
     """
@@ -21,6 +22,7 @@ class EditRouteTopLevel(tk.Toplevel):
         self.resizable(False, False)
         self.route_id = route_id
         self.refresh_callback = refresh_callback
+        center_window(self)
 
         # Modal
         self.transient(parent)
