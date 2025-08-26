@@ -5,6 +5,7 @@ from tkcalendar import DateEntry
 from apps.backend.services.stops import create_stop, get_route_stops
 from apps.backend.services.orders import get_all_orders  # asumo que existe
 from datetime import datetime
+from apps.frontend.gui_app.utils.windows_utils import center_window
 
 
 class AddWaypointTopLevel(tk.Toplevel):
@@ -15,6 +16,7 @@ class AddWaypointTopLevel(tk.Toplevel):
         self.parent = parent
         self.route_id = route_id
         self.refresh_callback = refresh_callback
+        center_window(self)
 
         # ---------Form------------
         ttk.Label(self, text="Select Order:").pack(pady=5, anchor="w")
@@ -33,6 +35,9 @@ class AddWaypointTopLevel(tk.Toplevel):
         # ---------Buttons------------
         ttk.Button(self, text="Save", command=self.save_waypoint).pack(side="left", expand=True, padx=10, pady=10)
         ttk.Button(self, text="Cancel", command=self.destroy).pack(side="right", expand=True, padx=10, pady=10)
+
+        
+
 
     def save_waypoint(self):
         try:
