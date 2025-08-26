@@ -2,6 +2,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from apps.backend.services.routes import get_route, delete_route
+from apps.frontend.gui_app.utils.windows_utils import center_window
 
 class DeleteRouteTopLevel(tk.Toplevel):
     """
@@ -12,6 +13,7 @@ class DeleteRouteTopLevel(tk.Toplevel):
         self.title("Delete Route")
         self.geometry("360x160")
         self.resizable(False, False)
+        center_window(self)
 
         self.route_id = route_id
         self.refresh_callback = refresh_callback
