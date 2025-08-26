@@ -8,14 +8,15 @@ from apps.frontend.gui_app.views.orders_frame import OrderFrame
 from apps.frontend.gui_app.views.configuration_frame import ConfigFrame
 from apps.frontend.gui_app.views.user_frame import UserFrame
 from apps.frontend.gui_app.views.menu_bar import MenuBar
+from apps.frontend.gui_app.utils.windows_utils import center_window, on_resize
 
 class MainApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("DEMO Route and Logistics")
-        self.geometry("830x600")
-        self.minsize(830,600)
-        self.maxsize(830,600)
+        self.geometry("1235x600")
+        self.minsize(1235,600)
+        self.maxsize(1235,600)
         self.config(bg="#f0f0f0")
 
         # --------- MenuBar --------
@@ -71,6 +72,7 @@ class MainApp(tk.Tk):
 
         # Default frame
         self.show_frame("DashboardFrame")
+        center_window(self) # Centers the window
 
     def show_frame(self, name):
         frame = self.frames[name]
