@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from apps.backend.services.stops import delete_stop, get_route_stops
+from apps.frontend.gui_app.utils.windows_utils import center_window
 
 class DeleteStopTopLevel(tk.Toplevel):
     def __init__(self, parent, route_id, refresh_callback=None):
@@ -9,6 +10,7 @@ class DeleteStopTopLevel(tk.Toplevel):
         self.geometry("400x300")
         self.route_id = route_id
         self.refresh_callback = refresh_callback
+        center_window(self)
 
         ttk.Label(self, text="Select Stop to Delete:").pack(pady=10)
 
