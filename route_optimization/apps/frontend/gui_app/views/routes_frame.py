@@ -8,6 +8,7 @@ from apps.backend.services.routes import get_all_route
 from apps.frontend.gui_app.views.top_level_views.delete_stop_top_level import DeleteStopTopLevel
 from apps.frontend.gui_app.views.top_level_views.see_all_routes_top_level import SeeAllRoutesTopLevel
 from apps.frontend.gui_app.views.top_level_views.assign_route_top_level import AssignRouteTopLevel
+from apps.frontend.gui_app.views.top_level_views.edit_stop_top_level import EditStopTopLevel
 from apps.backend.services.routes_info import get_full_route_info
 import webbrowser
 
@@ -90,7 +91,7 @@ class RoutesFrame(tk.Frame):
         ttk.Button(buttons_container, text="Delete waypoint(stop)", command=self.delete_waypoint).grid(row=0, column=1, padx=5, pady=5, sticky="ew")
         ttk.Button(buttons_container, text="Load route", command=self.load_route).grid(row=0, column=2, padx=5, pady=5, sticky="ew")
         ttk.Button(buttons_container, text="See all routes", command=self.see_all_routes).grid(row=1, column=0, padx=5, pady=5, sticky="ew")
-        ttk.Button(buttons_container, text="Open MAP (eliminate)", command=self.refresh_all).grid(row=1, column=1, padx=5, pady=5, sticky="ew")
+        ttk.Button(buttons_container, text="Edit Stop", command=self.edit_stop).grid(row=1, column=1, padx=5, pady=5, sticky="ew")
         ttk.Button(buttons_container, text="Assign route", command=self.assign_route).grid(row=1, column=2, padx=5, pady=5, sticky="ew")
 
         # Cargar primer route si existe
@@ -201,3 +202,26 @@ class RoutesFrame(tk.Frame):
 
     def assign_route(self):
         AssignRouteTopLevel(self)
+    
+
+    def edit_stop(self):
+        if self.current_route_id is None:
+            messagebox.showwarning("Warning", "Please select a route first.")
+            return
+        
+        selected_item = self.stops_tree.selection()
+        if not selected_item:
+            messagebox.showwarning("Warning", "Please select a stop to edit.")
+            return
+
+        values = self.stops_tree.item(selected_item[0], "values")
+        stop_order = values[0]
+
+        stops = get_route_stops(self.current_route_id)
+        stop = next((s for s in stops if str(s.stop_order) == str(stop_order)), None)
+
+        if not stop:
+            messagebox.showerror("Error", "Stop not found.")
+            return
+
+        EditStopTopLevel(self, stop, self.refresh_all)
