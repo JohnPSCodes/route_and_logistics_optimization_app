@@ -3,10 +3,9 @@ from route_optimization.config_user import GOOGLE_API_KEY
 from apps.backend.models import Route
 from apps.backend.services.stops import get_route_stops
 
-DISTANCE_MATRIX_URL = "https://maps.googleapis.com/maps/api/distancematrix/json"
+DIRECTIONS_URL = "https://maps.googleapis.com/maps/api/directions/json"
 
 def get_route_driver(route_id):
-    """Devuelve el nombre del conductor asignado a la ruta o 'No asignado' si no tiene."""
     try:
         route = Route.objects.get(pk=route_id)
         if hasattr(route, "driver") and route.driver:
@@ -16,11 +15,14 @@ def get_route_driver(route_id):
     return "No asignado"
 
 def get_route_stats(route_id):
-    """Devuelve estadísticas de la ruta: cantidad de stops, completados y ubicaciones."""
     stops = get_route_stops(route_id)
     total_stops = len(stops)
     completed_stops = sum(1 for s in stops if s.delivered)
-    locations = [(s.order.latitude, s.order.longitude) for s in stops]
+
+    # Solo las paradas pendientes se consideran para el cálculo de la ruta
+    pending_stops = [s for s in stops if not s.delivered]
+
+    locations = [(s.order.latitude, s.order.longitude) for s in pending_stops]
     return {
         "total_stops": total_stops,
         "completed_stops": completed_stops,
@@ -29,37 +31,36 @@ def get_route_stats(route_id):
 
 def get_route_duration_and_distance(locations):
     """
-    Calcula duración y distancia usando Distance Matrix API.
-    locations: lista de tuplas (lat, lng)
-    Devuelve diccionario con 'duration_min', 'distance_km' y 'duration_str'.
+    Calcula duración y distancia usando Google Directions API.
+    Considera el orden de las paradas pendientes.
     """
     if len(locations) < 2:
         return {"duration_min": 0, "distance_km": 0, "duration_str": "0h 0m"}
 
-    origins = "|".join([f"{lat},{lng}" for lat, lng in locations[:-1]])
-    destinations = f"{locations[-1][0]},{locations[-1][1]}"
+    origin = f"{locations[0][0]},{locations[0][1]}"
+    destination = f"{locations[-1][0]},{locations[-1][1]}"
+    waypoints = "|".join([f"{lat},{lng}" for lat, lng in locations[1:-1]]) if len(locations) > 2 else None
 
     params = {
-        "origins": origins,
-        "destinations": destinations,
+        "origin": origin,
+        "destination": destination,
         "key": GOOGLE_API_KEY,
         "mode": "driving"
     }
+    if waypoints:
+        params["waypoints"] = waypoints
 
-    response = requests.get(DISTANCE_MATRIX_URL, params=params)
+    response = requests.get(DIRECTIONS_URL, params=params)
     data = response.json()
 
-    total_distance_m = 0
-    total_duration_s = 0
+    if not data.get("routes"):
+        return {"duration_min": 0, "distance_km": 0, "duration_str": "0h 0m"}
 
-    if data.get("rows"):
-        for row in data["rows"]:
-            for element in row.get("elements", []):
-                if element.get("status") == "OK":
-                    total_distance_m += element["distance"]["value"]
-                    total_duration_s += element["duration"]["value"]
+    leg_list = data["routes"][0]["legs"]
 
-    # Convertir segundos a horas y minutos
+    total_distance_m = sum(leg["distance"]["value"] for leg in leg_list)
+    total_duration_s = sum(leg["duration"]["value"] for leg in leg_list)
+
     hours = total_duration_s // 3600
     minutes = (total_duration_s % 3600) // 60
     duration_str = f"{hours}h {minutes}m"
@@ -71,7 +72,6 @@ def get_route_duration_and_distance(locations):
     }
 
 def get_full_route_info(route_id):
-    """Devuelve toda la info de la ruta para mostrar en el panel."""
     stats = get_route_stats(route_id)
     driver = get_route_driver(route_id)
     duration_distance = get_route_duration_and_distance(stats["locations"])
