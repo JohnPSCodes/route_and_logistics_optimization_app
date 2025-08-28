@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import requests
 from apps.frontend.gui_app.utils.windows_utils import center_window
-from route_optimization.config_user import LOGIN_URL, JWT_TOKEN
+from route_optimization.config_user import LOGIN_URL
 from apps.frontend.main import MainApp
 
 API_LOGIN_URL = LOGIN_URL  # Adjust to your Django authentication endpoint
@@ -94,13 +94,18 @@ class LoginWindow(tk.Tk):
                 data = response.json()
                 token = data.get("access")  # JWT access token (if used)
                 messagebox.showinfo("Success", f"Welcome {username}!")
-                
-                JWT_TOKEN = token
 
-                # Save token for later use
-                with open("auth_token.txt", "w") as f:
-                    f.write(token)
-                
+                # ✅ Save token inside config_user.py
+                with open("route_optimization/config_user.py", "r", encoding="utf-8") as f:
+                    lines = f.readlines()
+
+                with open("route_optimization/config_user.py", "w", encoding="utf-8") as f:
+                    for line in lines:
+                        if line.startswith("JWT_TOKEN"):
+                            f.write(f'JWT_TOKEN = "{token}"\n')
+                        else:
+                            f.write(line)
+                            
 
                 # Close login and launch main application
                 self.destroy()
