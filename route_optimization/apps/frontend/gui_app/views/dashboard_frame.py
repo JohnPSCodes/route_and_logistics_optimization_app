@@ -209,7 +209,7 @@ class DashboardFrame(tk.Frame):
         self._clear_map()
 
     # ---------------- Selection handlers ----------------
-    def on_route_select(self, _event=None):
+    def on_route_select(self, _event=None): 
         sel = self.routes_tv.selection()
         if not sel:
             self._clear_detail()
@@ -236,8 +236,19 @@ class DashboardFrame(tk.Frame):
         self.detail_vars["stops"].set(str(info.get("total_stops", 0)))
         self.detail_vars["completed"].set(str(info.get("completed_stops", 0)))
         self.detail_vars["distance"].set(f"{info.get('distance_km', 0)} km")
-        # duration puede venir como "00h 00m" si lo implementaste así
-        dur_str = info.get("duration") or f"{info.get('duration_min', 0)} min"
+
+        # Obtiene la duración en minutos (puede ser float)
+        duration_min = info.get("duration_min", 0)
+
+        # Convierte a entero
+        duration_min = int(duration_min)
+
+        # Convierte a horas y minutos
+        hours = duration_min // 60
+        minutes = duration_min % 60
+
+        # Formatea como "HHh MMm"
+        dur_str = f"{hours:02d}h {minutes:02d}m"
         self.detail_vars["duration"].set(dur_str)
 
         # Mini-mapa
