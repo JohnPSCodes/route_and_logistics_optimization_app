@@ -8,7 +8,9 @@ from datetime import datetime
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'route_optimization.settings')
 django.setup()
 
-from apps.backend.models import User, Order, Route, Stop
+# Use "python -m apps.backend.scripts.initial_dataset" on terminal to load to the selected database
+
+from apps.backend.models import User, Order, Route, Stop, Driver
 
 def import_users_from_csv(filename):
     """Import users from a CSV file."""
@@ -89,9 +91,31 @@ def import_stops_from_csv(filename):
             )
     print("Stops imported successfully.")
 
+def import_drivers_from_csv(filename):
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.normpath(os.path.join(base_dir, '..', 'datasets', filename))
+    with open(file_path, newline='', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            try:
+                user = User.objects.get(user_id=int(row['user_id']))
+            except User.DoesNotExist:
+                print(f"User {row['user_id']} does not exist. Skipping driver.")
+                continue
+
+            Driver.objects.create(
+                user=user,
+                license_number=row['license_number'],
+                is_active=row['is_active'].lower() == 'true'
+            )
+    print("Drivers imported successfully.")
+
+
+
 if __name__ == "__main__":
     # Import datasets in the correct order to maintain FK constraints
     import_users_from_csv('datasets_users.csv')
     import_orders_from_csv('datasets_orders.csv')
     import_routes_from_csv('dataset_routes.csv')
     import_stops_from_csv('dataset_stops.csv')
+    import_drivers_from_csv('dataset_drivers.csv')
