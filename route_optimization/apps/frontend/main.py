@@ -14,7 +14,7 @@ from apps.frontend.gui_app.utils.windows_utils import center_window, on_resize
 class MainApp(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("DEMO Route and Logistics")
+        self.title("Route and Logistics OA by JohnPSCodes")
         self.geometry("1235x600")
         self.minsize(1235, 600)
         self.maxsize(1235, 600)
