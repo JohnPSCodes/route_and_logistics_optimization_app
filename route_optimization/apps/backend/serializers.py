@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, Order, Route, Stop,Driver,RouteInfo
+from .models import User, Order, Route, Stop,Driver
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -24,9 +24,4 @@ class StopSerializer(serializers.ModelSerializer):
 class DriverSerializer(serializers.ModelSerializer):
     class Meta:
         model = Driver
-        fields = '__all__'
-
-class RouteInfoSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = RouteInfo
         fields = '__all__'
