@@ -37,7 +37,6 @@ Jorge Flores,"Boulevard Coral 10, La Romana",18.4348,-68.9735,2,"2025-09-15 07:0
 Elisa Navarro,"Calle Verde 50, Puerto Plata",19.7880,-70.6900,4,"2025-09-16 11:00:00","2025-09-16 15:00:00",delivered
 Roberto Sanchez,"Avenida Mar 9, Santo Domingo",18.4850,-69.9310,3,"2025-09-17 08:00:00","2025-09-17 12:00:00",in_transit
 Marta Mora,"Calle Estrella 66, Santiago",19.4580,-70.7000,5,"2025-09-18 10:00:00","2025-09-18 13:30:00",pending
-Enrique Vega,"Calle Comercio 34, La Romana",18.4320,-68.9710,1,"2025-09-19 07:30:00","2025-09-19 11:30:00",delivered
 Monica Dominguez,"Avenida Libertad 77, Puerto Plata",19.7905,-70.6885,2,"2025-09-20 09:00:00","2025-09-20 13:00:00",pending
 Felipe Navarro,"Calle Naranja 12, Santo Domingo",18.4855,-69.9320,3,"2025-09-21 08:00:00","2025-09-21 12:00:00",pending
 Silvia Mendoza,"Avenida Cielo 34, Santiago",19.4595,-70.6975,2,"2025-09-22 09:00:00","2025-09-22 11:30:00",in_transit
@@ -99,5 +98,280 @@ Javier Rojas,"Avenida Almendra 66, Santo Domingo",18.4856,-69.9316,3,"2025-11-17
 Natalia Jiménez,"Calle Nuez 89, Santiago",19.4590,-70.7005,4,"2025-11-18 10:00:00","2025-11-18 13:30:00",pending
 Fernando Vargas,"Calle Ciprés 22, La Romana",18.4340,-68.9730,5,"2025-11-19 07:30:00","2025-11-19 11:30:00",delivered
 Isabel Flores,"Boulevard Laurel 50, Puerto Plata",19.7910,-70.6880,1,"2025-11-20 09:00:00","2025-11-20 13:00:00",pending
-
-
+Eduardo Martínez,"Calle Pino 11, Santo Domingo",18.4850,-69.9330,2,"2025-11-21 08:00:00","2025-11-21 12:00:00",in_transit
+Lorena Castillo,"Avenida Roble 18, Santiago",19.4620,-70.6990,3,"2025-11-22 09:00:00","2025-11-22 11:30:00",pending
+Miguel Ángel Gómez,"Calle Cedro 33, La Romana",18.4345,-68.9745,1,"2025-11-23 13:00:00","2025-11-23 16:00:00",delivered
+Sofía Navarro,"Boulevard Almendro 22, Puerto Plata",19.7890,-70.6880,4,"2025-11-24 14:00:00","2025-11-24 18:00:00",pending
+Héctor Flores,"Calle Laurel 55, La Vega",19.2160,-70.5310,5,"2025-11-25 10:00:00","2025-11-25 13:00:00",cancelled
+Claudia Ramírez,"Avenida Jacaranda 28, San Cristóbal",18.4370,-70.1020,2,"2025-11-26 07:30:00","2025-11-26 12:30:00",in_transit
+Mario Díaz,"Calle Almendra 72, Santo Domingo",18.4855,-69.9310,1,"2025-11-27 09:00:00","2025-11-27 12:00:00",pending
+Valeria Paredes,"Avenida Las Américas 120, Santo Domingo",18.4865,-69.9310,3,"2025-11-28 08:00:00","2025-11-28 12:00:00",in_transit
+Oscar Méndez,"Calle Comercio 33, Santiago",19.4585,-70.6965,2,"2025-11-29 09:00:00","2025-11-29 11:30:00",pending
+Adriana López,"Boulevard Libertad 55, La Romana",18.4340,-68.9740,4,"2025-11-30 13:00:00","2025-11-30 16:00:00",delivered
+Jorge Morales,"Calle Mar 22, Puerto Plata",19.7905,-70.6895,1,"2025-12-01 14:00:00","2025-12-01 18:00:00",pending
+Elena Cruz,"Avenida Duarte 77, Santo Domingo",18.4858,-69.9320,5,"2025-12-02 10:00:00","2025-12-02 13:00:00",cancelled
+Ricardo Ramírez,"Calle Sol 44, Santiago",19.4575,-70.6995,3,"2025-12-03 07:30:00","2025-12-03 12:30:00",in_transit
+Mariana Torres,"Boulevard Central 66, La Romana",18.4338,-68.9735,2,"2025-12-04 09:00:00","2025-12-04 12:00:00",pending
+Felipe Díaz,"Calle Coral 90, Puerto Plata",19.7897,-70.6867,1,"2025-12-05 08:00:00","2025-12-05 10:30:00",delivered
+Lucía Herrera,"Avenida Libertad 45, Santo Domingo",18.4860,-69.9335,4,"2025-12-06 15:00:00","2025-12-06 19:00:00",pending
+Eduardo Peña,"Calle Luna 11, Santiago",19.4590,-70.7000,5,"2025-12-07 07:00:00","2025-12-07 11:00:00",in_transit
+Natalia Vargas,"Boulevard Almendro 23, La Romana",18.4345,-68.9745,2,"2025-12-08 10:00:00","2025-12-08 13:00:00",delivered
+Javier Gómez,"Calle Laurel 55, Puerto Plata",19.7902,-70.6880,1,"2025-12-09 13:30:00","2025-12-09 17:00:00",pending
+María Castillo,"Avenida Mar 32, Santo Domingo",18.4850,-69.9315,3,"2025-12-10 08:00:00","2025-12-10 12:00:00",cancelled
+Diego Ramos,"Calle Estrella 88, Santiago",19.4588,-70.6980,4,"2025-12-11 09:30:00","2025-12-11 14:00:00",in_transit
+Paula Moreno,"Boulevard Sol 12, La Romana",18.4335,-68.9732,5,"2025-12-12 07:00:00","2025-12-12 12:00:00",pending
+Roberto Sánchez,"Avenida Cielo 77, Puerto Plata",19.7895,-70.6890,2,"2025-12-13 11:00:00","2025-12-13 15:00:00",delivered
+Ana Gil,"Calle Jacaranda 44, Santo Domingo",18.4845,-69.9325,1,"2025-12-14 08:00:00","2025-12-14 12:00:00",in_transit
+Fernando Martínez,"Boulevard Mango 33, Santiago",19.4570,-70.6960,3,"2025-12-15 10:00:00","2025-12-15 13:30:00",pending
+Sofía Rodríguez,"Calle Pino 66, La Romana",18.4329,-68.9730,4,"2025-12-16 07:30:00","2025-12-16 11:30:00",delivered
+Héctor Pérez,"Avenida Roble 21, Puerto Plata",19.7900,-70.6870,5,"2025-12-17 09:00:00","2025-12-17 13:00:00",pending
+Claudia Jiménez,"Calle Cedro 11, Santo Domingo",18.4862,-69.9308,2,"2025-12-18 08:00:00","2025-12-18 12:00:00",in_transit
+Mario Torres,"Boulevard Laurel 78, Santiago",19.4595,-70.6990,3,"2025-12-19 09:00:00","2025-12-19 11:30:00",pending
+Valeria Flores,"Calle Mariposa 50, La Romana",18.4337,-68.9740,1,"2025-12-20 13:00:00","2025-12-20 16:00:00",delivered
+Ricardo López,"Avenida Estrella 23, Puerto Plata",19.7905,-70.6885,4,"2025-12-21 14:00:00","2025-12-21 18:00:00",pending
+Mariana Hernández,"Calle Almendra 67, Santo Domingo",18.4858,-69.9312,5,"2025-12-22 10:00:00","2025-12-22 13:00:00",cancelled
+Eduardo Rodríguez,"Boulevard Cedro 45, Santiago",19.4580,-70.7000,2,"2025-12-23 07:30:00","2025-12-23 12:30:00",in_transit
+Natalia Gómez,"Calle Laurel 33, La Romana",18.4340,-68.9735,3,"2025-12-24 09:00:00","2025-12-24 12:00:00",pending
+Carlos Pérez,"Avenida Coral 77, Puerto Plata",19.7892,-70.6865,1,"2025-12-25 08:00:00","2025-12-25 10:30:00",delivered
+Patricia Díaz,"Calle Sol 12, Santo Domingo",18.4855,-69.9320,4,"2025-12-26 15:00:00","2025-12-26 19:00:00",pending
+Javier Morales,"Boulevard Almendro 90, Santiago",19.4578,-70.6975,5,"2025-12-27 07:00:00","2025-12-27 11:00:00",in_transit
+Lucía Sánchez,"Avenida Mar 11, La Romana",18.4332,-68.9732,2,"2025-12-28 10:00:00","2025-12-28 13:00:00",delivered
+Fernando Castro,"Calle Cedro 54, Puerto Plata",19.7907,-70.6898,1,"2025-12-29 13:30:00","2025-12-29 17:00:00",pending
+Sofía Morales,"Calle Jacaranda 44, Santo Domingo",18.4840,-69.9330,3,"2025-12-30 08:00:00","2025-12-30 12:00:00",cancelled
+Diego Torres,"Boulevard Cielo 32, Santiago",19.4590,-70.6987,4,"2025-12-31 09:00:00","2025-12-31 11:30:00",in_transit
+Paula Martínez,"Calle Laurel 99, La Romana",18.4335,-68.9745,5,"2026-01-01 13:00:00","2026-01-01 16:00:00",pending
+Jorge Paredes,"Avenida Las Américas 88, Santo Domingo",18.4863,-69.9315,3,"2026-01-02 08:00:00","2026-01-02 12:00:00",in_transit
+Elena Ramos,"Calle Comercio 55, Santiago",19.4582,-70.6968,2,"2026-01-03 09:00:00","2026-01-03 11:30:00",pending
+Ricardo Torres,"Boulevard Libertad 21, La Romana",18.4339,-68.9738,4,"2026-01-04 13:00:00","2026-01-04 16:00:00",delivered
+Mariana Pino,"Calle Mar 33, Puerto Plata",19.7901,-70.6887,1,"2026-01-05 14:00:00","2026-01-05 18:00:00",pending
+Felipe Jiménez,"Avenida Duarte 90, Santo Domingo",18.4857,-69.9327,5,"2026-01-06 10:00:00","2026-01-06 13:00:00",cancelled
+Lucía Vargas,"Calle Sol 78, Santiago",19.4573,-70.6992,3,"2026-01-07 07:30:00","2026-01-07 12:30:00",in_transit
+Eduardo Torres,"Boulevard Central 44, La Romana",18.4341,-68.9742,2,"2026-01-08 09:00:00","2026-01-08 12:00:00",pending
+Natalia Herrera,"Calle Coral 66, Puerto Plata",19.7896,-70.6865,1,"2026-01-09 08:00:00","2026-01-09 10:30:00",delivered
+Javier Castillo,"Avenida Libertad 12, Santo Domingo",18.4861,-69.9332,4,"2026-01-10 15:00:00","2026-01-10 19:00:00",pending
+Paula Mendoza,"Calle Luna 33, Santiago",19.4591,-70.6998,5,"2026-01-11 07:00:00","2026-01-11 11:00:00",in_transit
+Ricardo Gómez,"Boulevard Almendro 55, La Romana",18.4336,-68.9740,2,"2026-01-12 10:00:00","2026-01-12 13:00:00",delivered
+María Díaz,"Calle Laurel 77, Puerto Plata",19.7903,-70.6881,1,"2026-01-13 13:30:00","2026-01-13 17:00:00",pending
+Diego Sánchez,"Avenida Mar 44, Santo Domingo",18.4848,-69.9328,3,"2026-01-14 08:00:00","2026-01-14 12:00:00",cancelled
+Sofía Paredes,"Calle Estrella 12, Santiago",19.4586,-70.6985,4,"2026-01-15 09:30:00","2026-01-15 14:00:00",in_transit
+Fernando Castillo,"Boulevard Sol 34, La Romana",18.4338,-68.9736,5,"2026-01-16 07:00:00","2026-01-16 12:00:00",pending
+Valeria Ramírez,"Avenida Cielo 77, Puerto Plata",19.7898,-70.6892,2,"2026-01-17 11:00:00","2026-01-17 15:00:00",delivered
+Mario Pino,"Calle Jacaranda 11, Santo Domingo",18.4842,-69.9331,1,"2026-01-18 08:00:00","2026-01-18 12:00:00",in_transit
+Ana Torres,"Boulevard Mango 33, Santiago",19.4576,-70.6970,3,"2026-01-19 10:00:00","2026-01-19 13:30:00",pending
+Javier Flores,"Calle Pino 55, La Romana",18.4327,-68.9731,4,"2026-01-20 07:30:00","2026-01-20 11:30:00",delivered
+Patricia Sánchez,"Avenida Roble 66, Puerto Plata",19.7906,-70.6878,5,"2026-01-21 09:00:00","2026-01-21 13:00:00",pending
+Lucía Morales,"Calle Cedro 22, Santo Domingo",18.4860,-69.9318,2,"2026-01-22 08:00:00","2026-01-22 12:00:00",in_transit
+Fernando Jiménez,"Boulevard Laurel 90, Santiago",19.4593,-70.6995,3,"2026-01-23 09:00:00","2026-01-23 11:30:00",pending
+Sofía Castillo,"Calle Mariposa 44, La Romana",18.4334,-68.9743,1,"2026-01-24 13:00:00","2026-01-24 16:00:00",delivered
+Ricardo Ramírez,"Avenida Estrella 33, Puerto Plata",19.7901,-70.6883,4,"2026-01-25 14:00:00","2026-01-25 18:00:00",pending
+Mariana Gómez,"Calle Almendra 55, Santo Domingo",18.4854,-69.9316,5,"2026-01-26 10:00:00","2026-01-26 13:00:00",cancelled
+Eduardo Martínez,"Boulevard Cedro 66, Santiago",19.4589,-70.6987,2,"2026-01-27 07:30:00","2026-01-27 12:30:00",in_transit
+Natalia López,"Calle Laurel 44, La Romana",18.4339,-68.9734,3,"2026-01-28 09:00:00","2026-01-28 12:00:00",pending
+Carlos Paredes,"Avenida Coral 77, Puerto Plata",19.7894,-70.6867,1,"2026-01-29 08:00:00","2026-01-29 10:30:00",delivered
+Patricia Jiménez,"Calle Sol 33, Santo Domingo",18.4852,-69.9329,4,"2026-01-30 15:00:00","2026-01-30 19:00:00",pending
+Javier Ramírez,"Boulevard Almendro 22, Santiago",19.4577,-70.6965,5,"2026-01-31 07:00:00","2026-01-31 11:00:00",in_transit
+Lucía Pino,"Avenida Mar 55, La Romana",18.4333,-68.9730,2,"2026-02-01 10:00:00","2026-02-01 13:00:00",delivered
+Fernando Torres,"Calle Cedro 33, Puerto Plata",19.7904,-70.6890,1,"2026-02-02 13:30:00","2026-02-02 17:00:00",pending
+Sofía Hernández,"Calle Jacaranda 77, Santo Domingo",18.4847,-69.9333,3,"2026-02-03 08:00:00","2026-02-03 12:00:00",cancelled
+Diego López,"Boulevard Cielo 44, Santiago",19.4590,-70.6980,4,"2026-02-04 09:00:00","2026-02-04 11:30:00",in_transit
+Paula Torres,"Calle Laurel 88, La Romana",18.4336,-68.9740,5,"2026-02-05 13:00:00","2026-02-05 16:00:00",pending
+Marcos Paredes,"Avenida Sol 22, Puerto Plata",19.7902,-70.6872,2,"2026-02-06 08:00:00","2026-02-06 12:00:00",in_transit
+Lucía Martínez,"Calle Mar 11, Santo Domingo",18.4851,-69.9319,1,"2026-02-07 09:00:00","2026-02-07 11:30:00",pending
+Javier Gómez,"Boulevard Cedro 33, Santiago",19.4581,-70.6973,3,"2026-02-08 13:00:00","2026-02-08 16:00:00",delivered
+Patricia Torres,"Calle Coral 55, La Romana",18.4337,-68.9745,4,"2026-02-09 14:00:00","2026-02-09 18:00:00",pending
+Ricardo Fernández,"Avenida Almendro 77, Puerto Plata",19.7899,-70.6884,5,"2026-02-10 10:00:00","2026-02-10 13:00:00",cancelled
+Mariana Castillo,"Calle Laurel 66, Santo Domingo",18.4844,-69.9323,2,"2026-02-11 07:30:00","2026-02-11 12:30:00",in_transit
+Eduardo Morales,"Boulevard Sol 11, Santiago",19.4595,-70.6990,1,"2026-02-12 09:00:00","2026-02-12 12:00:00",pending
+Sofía Ramírez,"Calle Cielo 22, La Romana",18.4335,-68.9733,3,"2026-02-13 08:00:00","2026-02-13 10:30:00",delivered
+Fernando Díaz,"Avenida Mar 44, Puerto Plata",19.7900,-70.6862,4,"2026-02-14 15:00:00","2026-02-14 19:00:00",pending
+Valeria Hernández,"Calle Almendro 33, Santo Domingo",18.4862,-69.9315,5,"2026-02-15 07:00:00","2026-02-15 11:00:00",in_transit
+Javier Torres,"Boulevard Cedro 44, Santiago",19.4579,-70.6969,2,"2026-02-16 10:00:00","2026-02-16 13:00:00",delivered
+Natalia Paredes,"Calle Laurel 55, La Romana",18.4338,-68.9741,1,"2026-02-17 13:30:00","2026-02-17 17:00:00",pending
+Diego Martínez,"Avenida Sol 66, Puerto Plata",19.7895,-70.6890,3,"2026-02-18 08:00:00","2026-02-18 12:00:00",cancelled
+Paula Ramírez,"Calle Mar 33, Santo Domingo",18.4846,-69.9327,4,"2026-02-19 09:30:00","2026-02-19 14:00:00",in_transit
+Ricardo Pino,"Boulevard Coral 22, Santiago",19.4585,-70.6982,5,"2026-02-20 07:00:00","2026-02-20 12:00:00",pending
+Lucía Jiménez,"Calle Almendro 44, La Romana",18.4334,-68.9742,2,"2026-02-21 11:00:00","2026-02-21 15:00:00",delivered
+Fernando Paredes,"Avenida Mar 77, Puerto Plata",19.7903,-70.6868,1,"2026-02-22 08:00:00","2026-02-22 12:00:00",in_transit
+Sofía López,"Calle Laurel 22, Santo Domingo",18.4850,-69.9330,3,"2026-02-23 10:00:00","2026-02-23 13:30:00",pending
+Javier Morales,"Boulevard Sol 33, Santiago",19.4588,-70.6995,4,"2026-02-24 07:30:00","2026-02-24 11:30:00",delivered
+Patricia Díaz,"Calle Mariposa 11, La Romana",18.4336,-68.9736,5,"2026-02-25 09:00:00","2026-02-25 13:00:00",pending
+Diego Sánchez,"Avenida Cielo 55, Puerto Plata",19.7897,-70.6886,2,"2026-02-26 08:00:00","2026-02-26 10:30:00",in_transit
+Lucía Ramírez,"Calle Laurel 33, Santo Domingo",18.4849,-69.9329,1,"2026-02-27 13:00:00","2026-02-27 16:00:00",delivered
+Fernando Torres,"Boulevard Almendro 77, Santiago",19.4591,-70.6978,3,"2026-02-28 14:00:00","2026-02-28 18:00:00",pending
+Mariana Paredes,"Calle Sol 44, La Romana",18.4337,-68.9743,4,"2026-02-28 10:00:00","2026-02-28 13:00:00",cancelled
+Ricardo Jiménez,"Avenida Mar 11, Puerto Plata",19.7905,-70.6875,5,"2026-03-01 07:30:00","2026-03-01 12:30:00",in_transit
+Sofía Martínez,"Calle Almendro 66, Santo Domingo",18.4853,-69.9317,2,"2026-03-02 09:00:00","2026-03-02 12:00:00",pending
+Javier Fernández,"Boulevard Cedro 11, Santiago",19.4583,-70.6967,1,"2026-03-03 08:00:00","2026-03-03 10:30:00",delivered
+Patricia Torres,"Calle Laurel 44, La Romana",18.4339,-68.9740,3,"2026-03-04 15:00:00","2026-03-04 19:00:00",pending
+Lucía González,"Avenida Sol 22, Puerto Plata",19.7898,-70.6882,4,"2026-03-05 07:00:00","2026-03-05 11:00:00",in_transit
+Diego Paredes,"Calle Mar 55, Santo Domingo",18.4861,-69.9316,5,"2026-03-06 10:00:00","2026-03-06 13:00:00",delivered
+Valeria Torres,"Boulevard Coral 33, Santiago",19.4586,-70.6980,2,"2026-03-07 13:30:00","2026-03-07 17:00:00",pending
+Fernando Jiménez,"Calle Almendro 77, La Romana",18.4335,-68.9734,1,"2026-03-08 08:00:00","2026-03-08 12:00:00",cancelled
+Sofía Ramírez,"Avenida Mar 44, Puerto Plata",19.7901,-70.6870,3,"2026-03-09 09:00:00","2026-03-09 11:30:00",in_transit
+Javier Pino,"Calle Laurel 55, Santo Domingo",18.4856,-69.9328,4,"2026-03-10 13:00:00","2026-03-10 16:00:00",pending
+Patricia Morales,"Boulevard Sol 66, Santiago",19.4590,-70.6992,5,"2026-03-11 14:00:00","2026-03-11 18:00:00",delivered
+Diego Fernández,"Calle Mar 22, La Romana",18.4336,-68.9739,2,"2026-03-12 08:00:00","2026-03-12 12:00:00",in_transit
+Lucía Paredes,"Avenida Sol 33, Puerto Plata",19.7904,-70.6865,1,"2026-03-13 09:00:00","2026-03-13 11:30:00",pending
+Fernando Torres,"Boulevard Coral 44, Santiago",19.4587,-70.6981,3,"2026-03-14 13:00:00","2026-03-14 16:00:00",delivered
+Mariana Jiménez,"Calle Laurel 11, Santo Domingo",18.4847,-69.9318,4,"2026-03-15 14:00:00","2026-03-15 18:00:00",pending
+Ricardo Paredes,"Avenida Almendro 22, La Romana",18.4338,-68.9742,5,"2026-03-16 10:00:00","2026-03-16 13:00:00",cancelled
+Sofía Martínez,"Calle Mar 44, Puerto Plata",19.7899,-70.6881,2,"2026-03-17 07:30:00","2026-03-17 12:30:00",in_transit
+Javier Morales,"Boulevard Sol 55, Santiago",19.4580,-70.6970,1,"2026-03-18 09:00:00","2026-03-18 12:00:00",pending
+Patricia Díaz,"Calle Laurel 33, Santo Domingo",18.4848,-69.9325,3,"2026-03-19 08:00:00","2026-03-19 10:30:00",delivered
+Diego Ramírez,"Avenida Mar 66, La Romana",18.4335,-68.9741,4,"2026-03-20 15:00:00","2026-03-20 19:00:00",pending
+Valeria Torres,"Calle Almendro 11, Puerto Plata",19.7902,-70.6873,5,"2026-03-21 07:00:00","2026-03-21 11:00:00",in_transit
+Javier Pino,"Boulevard Coral 22, Santiago",19.4582,-70.6968,2,"2026-03-22 10:00:00","2026-03-22 13:00:00",delivered
+Lucía Morales,"Calle Mar 33, Santo Domingo",18.4850,-69.9329,1,"2026-03-23 13:30:00","2026-03-23 17:00:00",pending
+Fernando Paredes,"Avenida Sol 44, La Romana",18.4336,-68.9740,3,"2026-03-24 08:00:00","2026-03-24 12:00:00",cancelled
+Sofía Jiménez,"Calle Laurel 22, Puerto Plata",19.7900,-70.6868,4,"2026-03-25 09:00:00","2026-03-25 11:30:00",in_transit
+Javier Fernández,"Boulevard Sol 33, Santiago",19.4585,-70.6975,5,"2026-03-26 07:00:00","2026-03-26 12:00:00",pending
+Patricia Torres,"Calle Almendro 66, Santo Domingo",18.4849,-69.9316,2,"2026-03-27 11:00:00","2026-03-27 15:00:00",delivered
+Diego Sánchez,"Avenida Mar 11, La Romana",18.4337,-68.9743,1,"2026-03-28 08:00:00","2026-03-28 12:00:00",in_transit
+Lucía Ramírez,"Calle Laurel 44, Puerto Plata",19.7898,-70.6883,3,"2026-03-29 10:00:00","2026-03-29 13:30:00",pending
+Fernando Torres,"Boulevard Coral 66, Santiago",19.4590,-70.6990,4,"2026-03-30 07:30:00","2026-03-30 11:30:00",delivered
+Mariana Paredes,"Calle Sol 22, Santo Domingo",18.4339,-68.9738,5,"2026-03-31 09:00:00","2026-03-31 13:00:00",pending
+Ricardo Jiménez,"Avenida Mar 33, La Romana",18.4340,-68.9745,2,"2026-04-01 08:00:00","2026-04-01 10:30:00",in_transit
+Sofía Martínez,"Calle Almendro 44, Puerto Plata",19.7901,-70.6870,1,"2026-04-02 13:00:00","2026-04-02 16:00:00",delivered
+Javier Pino,"Boulevard Coral 11, Santiago",19.4584,-70.6966,3,"2026-04-03 14:00:00","2026-04-03 18:00:00",pending
+Patricia Morales,"Calle Laurel 55, Santo Domingo",18.4847,-69.9321,4,"2026-04-04 10:00:00","2026-04-04 13:00:00",cancelled
+Diego Fernández,"Avenida Sol 22, La Romana",18.4335,-68.9742,5,"2026-04-05 07:30:00","2026-04-05 12:30:00",in_transit
+Lucía Paredes,"Calle Mar 44, Puerto Plata",19.7905,-70.6884,2,"2026-04-06 09:00:00","2026-04-06 12:00:00",pending
+Fernando Torres,"Boulevard Coral 33, Santiago",19.4581,-70.6972,1,"2026-04-07 08:00:00","2026-04-07 10:30:00",delivered
+Mariana Jiménez,"Calle Laurel 11, Santo Domingo",18.4851,-69.9319,3,"2026-04-08 15:00:00","2026-04-08 19:00:00",pending
+Ricardo Paredes,"Avenida Almendro 22, La Romana",18.4338,-68.9741,4,"2026-04-09 07:00:00","2026-04-09 11:00:00",in_transit
+Sofía Martínez,"Calle Mar 66, Puerto Plata",19.7897,-70.6876,5,"2026-04-10 10:00:00","2026-04-10 13:00:00",delivered
+Javier Morales,"Boulevard Sol 44, Santiago",19.4586,-70.6983,2,"2026-04-11 13:30:00","2026-04-11 17:00:00",pending
+Patricia Díaz,"Calle Laurel 33, Santo Domingo",18.4337,-68.9740,1,"2026-04-12 08:00:00","2026-04-12 12:00:00",cancelled
+Diego Ramírez,"Avenida Mar 44, La Romana",18.4336,-68.9743,3,"2026-04-13 09:00:00","2026-04-13 11:30:00",in_transit
+Valeria Torres,"Calle Almendro 11, Puerto Plata",19.7902,-70.6869,4,"2026-04-14 13:00:00","2026-04-14 16:00:00",pending
+Fernando Jiménez,"Boulevard Coral 22, Santiago",19.4583,-70.6969,5,"2026-04-15 14:00:00","2026-04-15 18:00:00",delivered
+Mariana Fernández,"Calle Sol 77, Santo Domingo",18.4846,-69.9315,2,"2026-04-16 08:00:00","2026-04-16 12:00:00",in_transit
+Javier Paredes,"Avenida Mar 88, La Romana",18.4339,-68.9746,1,"2026-04-17 09:00:00","2026-04-17 11:30:00",pending
+Lucía Torres,"Boulevard Coral 33, Santiago",19.4589,-70.6987,3,"2026-04-18 13:00:00","2026-04-18 16:00:00",delivered
+Diego Jiménez,"Calle Almendro 22, Puerto Plata",19.7903,-70.6875,4,"2026-04-19 14:00:00","2026-04-19 18:00:00",pending
+Patricia Morales,"Avenida Laurel 11, Santo Domingo",18.4848,-69.9320,5,"2026-04-20 10:00:00","2026-04-20 13:00:00",cancelled
+Fernando Sánchez,"Calle Mar 44, La Romana",18.4337,-68.9742,2,"2026-04-21 07:30:00","2026-04-21 12:30:00",in_transit
+Sofía Díaz,"Boulevard Sol 55, Santiago",19.4582,-70.6974,1,"2026-04-22 09:00:00","2026-04-22 12:00:00",pending
+Javier Torres,"Calle Laurel 33, Puerto Plata",19.7900,-70.6868,3,"2026-04-23 08:00:00","2026-04-23 10:30:00",delivered
+Lucía Jiménez,"Avenida Mar 66, Santo Domingo",18.4338,-68.9741,4,"2026-04-24 15:00:00","2026-04-24 19:00:00",pending
+Diego Paredes,"Calle Almendro 11, La Romana",18.4340,-68.9743,5,"2026-04-25 07:00:00","2026-04-25 11:00:00",in_transit
+Valeria Morales,"Boulevard Coral 22, Santiago",19.4585,-70.6980,2,"2026-04-26 10:00:00","2026-04-26 13:00:00",delivered
+Fernando Fernández,"Calle Laurel 44, Puerto Plata",19.7901,-70.6870,1,"2026-04-27 13:30:00","2026-04-27 17:00:00",pending
+Mariana Torres,"Avenida Sol 33, Santo Domingo",18.4341,-68.9740,3,"2026-04-28 08:00:00","2026-04-28 12:00:00",cancelled
+Ricardo Díaz,"Calle Mar 22, La Romana",18.4339,-68.9744,4,"2026-04-29 09:00:00","2026-04-29 11:30:00",in_transit
+Sofía Fernández,"Boulevard Coral 44, Santiago",19.4587,-70.6983,5,"2026-04-30 07:00:00","2026-04-30 12:00:00",pending
+Javier Morales,"Calle Almendro 33, Puerto Plata",19.7902,-70.6867,2,"2026-05-01 11:00:00","2026-05-01 15:00:00",delivered
+Patricia Torres,"Avenida Laurel 22, Santo Domingo",18.4847,-69.9318,1,"2026-05-02 08:00:00","2026-05-02 12:00:00",in_transit
+Diego Fernández,"Calle Sol 44, La Romana",18.4336,-68.9745,3,"2026-05-03 10:00:00","2026-05-03 13:30:00",pending
+Lucía Paredes,"Boulevard Coral 66, Santiago",19.4590,-70.6991,4,"2026-05-04 07:30:00","2026-05-04 11:30:00",delivered
+Fernando Torres,"Calle Laurel 11, Puerto Plata",19.7905,-70.6878,5,"2026-05-05 09:00:00","2026-05-05 13:00:00",pending
+Mariana Jiménez,"Avenida Mar 33, Santo Domingo",18.4337,-68.9742,2,"2026-05-06 08:00:00","2026-05-06 10:30:00",in_transit
+Ricardo Paredes,"Calle Almendro 44, La Romana",18.4339,-68.9741,1,"2026-05-07 13:00:00","2026-05-07 16:00:00",delivered
+Sofía Martínez,"Boulevard Coral 11, Santiago",19.4583,-70.6967,3,"2026-05-08 14:00:00","2026-05-08 18:00:00",pending
+Javier Pino,"Calle Laurel 55, Puerto Plata",19.7900,-70.6869,4,"2026-05-09 10:00:00","2026-05-09 13:00:00",cancelled
+Patricia Díaz,"Avenida Sol 22, Santo Domingo",18.4340,-68.9743,5,"2026-05-10 07:30:00","2026-05-10 12:30:00",in_transit
+Diego Ramírez,"Calle Mar 33, La Romana",18.4335,-68.9740,2,"2026-05-11 09:00:00","2026-05-11 12:00:00",pending
+Valeria Torres,"Boulevard Coral 22, Santiago",19.4584,-70.6969,1,"2026-05-12 08:00:00","2026-05-12 10:30:00",delivered
+Fernando Jiménez,"Calle Laurel 66, Puerto Plata",19.7903,-70.6871,3,"2026-05-13 15:00:00","2026-05-13 19:00:00",pending
+Mariana Fernández,"Avenida Mar 44, Santo Domingo",18.4338,-68.9745,4,"2026-05-14 07:00:00","2026-05-14 11:00:00",in_transit
+Javier Paredes,"Calle Almendro 11, La Romana",18.4341,-68.9742,5,"2026-05-15 10:00:00","2026-05-15 13:00:00",delivered
+Lucía Torres,"Boulevard Coral 33, Santiago",19.4586,-70.6981,2,"2026-05-16 13:30:00","2026-05-16 17:00:00",pending
+Diego Jiménez,"Calle Laurel 22, Puerto Plata",19.7901,-70.6865,1,"2026-05-17 08:00:00","2026-05-17 12:00:00",cancelled
+Patricia Morales,"Avenida Sol 33, Santo Domingo",18.4342,-68.9741,3,"2026-05-18 09:00:00","2026-05-18 11:30:00",in_transit
+Fernando Sánchez,"Calle Mar 44, La Romana",18.4339,-68.9744,4,"2026-05-19 13:00:00","2026-05-19 16:00:00",pending
+Sofía Díaz,"Boulevard Coral 44, Santiago",19.4587,-70.6984,5,"2026-05-20 14:00:00","2026-05-20 18:00:00",delivered
+Javier Torres,"Calle Almendro 33, Puerto Plata",19.7904,-70.6872,2,"2026-05-21 10:00:00","2026-05-21 13:00:00",pending
+Lucía Jiménez,"Avenida Laurel 11, Santo Domingo",18.4849,-69.9319,1,"2026-05-22 07:30:00","2026-05-22 11:30:00",in_transit
+Diego Paredes,"Calle Sol 55, La Romana",18.4336,-68.9743,3,"2026-05-23 09:00:00","2026-05-23 12:00:00",pending
+Valeria Morales,"Boulevard Coral 11, Santiago",19.4583,-70.6966,4,"2026-05-24 08:00:00","2026-05-24 10:30:00",delivered
+Fernando Paredes,"Calle Laurel 33, Puerto Plata",19.7902,-70.6869,2,"2026-05-25 13:00:00","2026-05-25 16:00:00",pending
+Mariana Díaz,"Avenida Sol 44, Santo Domingo",18.4339,-68.9744,1,"2026-05-26 14:00:00","2026-05-26 18:00:00",delivered
+Javier Fernández,"Boulevard Coral 22, Santiago",19.4585,-70.6970,3,"2026-05-27 10:00:00","2026-05-27 13:00:00",pending
+Lucía Ramírez,"Calle Almendro 11, La Romana",18.4340,-68.9742,4,"2026-05-28 07:30:00","2026-05-28 12:30:00",in_transit
+Diego Morales,"Boulevard Laurel 33, Puerto Plata",19.7901,-70.6870,5,"2026-05-29 09:00:00","2026-05-29 13:00:00",pending
+Patricia Jiménez,"Avenida Mar 22, Santo Domingo",18.4341,-68.9740,2,"2026-05-30 08:00:00","2026-05-30 10:30:00",delivered
+Fernando Torres,"Calle Sol 44, La Romana",18.4337,-68.9743,1,"2026-05-31 13:00:00","2026-05-31 16:00:00",pending
+Mariana Paredes,"Boulevard Coral 44, Santiago",19.4586,-70.6982,3,"2026-06-01 14:00:00","2026-06-01 18:00:00",cancelled
+Javier Ramírez,"Calle Laurel 22, Puerto Plata",19.7900,-70.6868,4,"2026-06-02 10:00:00","2026-06-02 13:00:00",in_transit
+Lucía Fernández,"Avenida Sol 33, Santo Domingo",18.4340,-68.9741,5,"2026-06-03 07:30:00","2026-06-03 12:30:00",pending
+Diego Jiménez,"Calle Mar 33, La Romana",18.4338,-68.9745,2,"2026-06-04 09:00:00","2026-06-04 12:00:00",delivered
+Valeria Paredes,"Boulevard Coral 22, Santiago",19.4587,-70.6984,1,"2026-06-05 08:00:00","2026-06-05 10:30:00",in_transit
+Fernando Ramírez,"Calle Laurel 11, Puerto Plata",19.7903,-70.6872,3,"2026-06-06 13:00:00","2026-06-06 16:00:00",pending
+Mariana Torres,"Avenida Mar 44, Santo Domingo",18.4341,-68.9742,4,"2026-06-07 14:00:00","2026-06-07 18:00:00",delivered
+Javier Paredes,"Boulevard Coral 11, Santiago",19.4584,-70.6969,5,"2026-06-08 10:00:00","2026-06-08 13:00:00",pending
+Lucía Díaz,"Calle Almendro 33, La Romana",18.4335,-68.9740,2,"2026-06-09 07:30:00","2026-06-09 11:30:00",in_transit
+Diego Fernández,"Boulevard Laurel 44, Puerto Plata",19.7905,-70.6865,1,"2026-06-10 09:00:00","2026-06-10 13:00:00",pending
+Patricia Torres,"Avenida Sol 22, Santo Domingo",18.4338,-68.9743,3,"2026-06-11 08:00:00","2026-06-11 10:30:00",delivered
+Fernando Díaz,"Calle Mar 44, La Romana",18.4337,-68.9741,4,"2026-06-12 13:00:00","2026-06-12 16:00:00",pending
+Mariana Fernández,"Boulevard Coral 33, Santiago",19.4589,-70.6987,5,"2026-06-13 14:00:00","2026-06-13 18:00:00",in_transit
+Javier Morales,"Calle Laurel 22, Puerto Plata",19.7902,-70.6870,2,"2026-06-14 10:00:00","2026-06-14 13:00:00",pending
+Lucía Jiménez,"Avenida Mar 33, Santo Domingo",18.4340,-68.9742,1,"2026-06-15 07:30:00","2026-06-15 12:30:00",delivered
+Diego Paredes,"Calle Almendro 44, La Romana",18.4339,-68.9741,3,"2026-06-16 09:00:00","2026-06-16 12:00:00",pending
+Valeria Torres,"Boulevard Coral 11, Santiago",19.4585,-70.6980,4,"2026-06-17 08:00:00","2026-06-17 10:30:00",cancelled
+Fernando Jiménez,"Calle Laurel 55, Puerto Plata",19.7901,-70.6871,5,"2026-06-18 13:00:00","2026-06-18 16:00:00",in_transit
+Mariana Fernández,"Avenida Sol 44, Santo Domingo",18.4338,-68.9745,2,"2026-06-19 14:00:00","2026-06-19 18:00:00",pending
+Javier Paredes,"Boulevard Coral 22, Santiago",19.4586,-70.6983,1,"2026-06-20 10:00:00","2026-06-20 13:00:00",delivered
+Lucía Ramírez,"Calle Almendro 33, La Romana",18.4336,-68.9743,3,"2026-06-21 07:30:00","2026-06-21 11:30:00",pending
+Diego Morales,"Boulevard Laurel 33, Puerto Plata",19.7903,-70.6872,4,"2026-06-22 09:00:00","2026-06-22 13:00:00",in_transit
+Patricia Jiménez,"Avenida Mar 22, Santo Domingo",18.4341,-68.9741,5,"2026-06-23 08:00:00","2026-06-23 10:30:00",pending
+Fernando Torres,"Calle Sol 44, La Romana",18.4337,-68.9742,2,"2026-06-24 13:00:00","2026-06-24 16:00:00",delivered
+Mariana Paredes,"Boulevard Coral 44, Santiago",19.4587,-70.6984,1,"2026-06-25 14:00:00","2026-06-25 18:00:00",pending
+Javier Ramírez,"Calle Laurel 22, Puerto Plata",19.7900,-70.6868,3,"2026-06-26 10:00:00","2026-06-26 13:00:00",cancelled
+Lucía Fernández,"Avenida Sol 33, Santo Domingo",18.4340,-68.9743,4,"2026-06-27 07:30:00","2026-06-27 12:30:00",in_transit
+Diego Jiménez,"Calle Mar 33, La Romana",18.4338,-68.9740,5,"2026-06-28 09:00:00","2026-06-28 12:00:00",pending
+Valeria Paredes,"Boulevard Coral 22, Santiago",19.4584,-70.6969,2,"2026-06-29 08:00:00","2026-06-29 10:30:00",delivered
+Fernando Ramírez,"Calle Laurel 11, Puerto Plata",19.7905,-70.6870,1,"2026-06-30 13:00:00","2026-06-30 16:00:00",pending
+Mariana Torres,"Avenida Mar 55, Santo Domingo",18.4342,-68.9740,3,"2026-07-01 09:00:00","2026-07-01 12:00:00",pending
+Javier Paredes,"Boulevard Coral 33, Santiago",19.4588,-70.6985,2,"2026-07-02 08:00:00","2026-07-02 10:30:00",in_transit
+Lucía Díaz,"Calle Almendro 44, La Romana",18.4339,-68.9742,1,"2026-07-03 13:00:00","2026-07-03 16:00:00",delivered
+Diego Fernández,"Boulevard Laurel 22, Puerto Plata",19.7904,-70.6867,4,"2026-07-04 14:00:00","2026-07-04 18:00:00",pending
+Patricia Torres,"Avenida Sol 55, Santo Domingo",18.4340,-68.9741,5,"2026-07-05 10:00:00","2026-07-05 13:00:00",in_transit
+Fernando Díaz,"Calle Mar 55, La Romana",18.4336,-68.9740,2,"2026-07-06 07:30:00","2026-07-06 11:30:00",pending
+Mariana Fernández,"Boulevard Coral 44, Santiago",19.4589,-70.6987,3,"2026-07-07 09:00:00","2026-07-07 12:00:00",delivered
+Javier Morales,"Calle Laurel 33, Puerto Plata",19.7902,-70.6871,1,"2026-07-08 08:00:00","2026-07-08 10:30:00",pending
+Lucía Jiménez,"Avenida Mar 66, Santo Domingo",18.4341,-68.9743,4,"2026-07-09 13:00:00","2026-07-09 16:00:00",in_transit
+Diego Paredes,"Calle Almendro 55, La Romana",18.4338,-68.9741,5,"2026-07-10 14:00:00","2026-07-10 18:00:00",pending
+Valeria Torres,"Boulevard Coral 33, Santiago",19.4587,-70.6980,2,"2026-07-11 10:00:00","2026-07-11 13:00:00",delivered
+Fernando Jiménez,"Calle Laurel 44, Puerto Plata",19.7903,-70.6868,1,"2026-07-12 07:30:00","2026-07-12 12:30:00",pending
+Mariana Fernández,"Avenida Sol 66, Santo Domingo",18.4340,-68.9742,3,"2026-07-13 09:00:00","2026-07-13 12:00:00",in_transit
+Javier Paredes,"Boulevard Coral 44, Santiago",19.4585,-70.6970,4,"2026-07-14 08:00:00","2026-07-14 10:30:00",pending
+Lucía Ramírez,"Calle Almendro 66, La Romana",18.4337,-68.9745,5,"2026-07-15 13:00:00","2026-07-15 16:00:00",delivered
+Diego Morales,"Boulevard Laurel 44, Puerto Plata",19.7901,-70.6872,2,"2026-07-16 14:00:00","2026-07-16 18:00:00",pending
+Patricia Jiménez,"Avenida Mar 77, Santo Domingo",18.4339,-68.9740,1,"2026-07-17 10:00:00","2026-07-17 13:00:00",in_transit
+Fernando Torres,"Calle Sol 55, La Romana",18.4336,-68.9743,3,"2026-07-18 07:30:00","2026-07-18 11:30:00",pending
+Mariana Paredes,"Boulevard Coral 55, Santiago",19.4586,-70.6984,4,"2026-07-19 09:00:00","2026-07-19 12:00:00",delivered
+Javier Ramírez,"Calle Laurel 55, Puerto Plata",19.7900,-70.6869,5,"2026-07-20 08:00:00","2026-07-20 10:30:00",pending
+Lucía Fernández,"Avenida Sol 77, Santo Domingo",18.4341,-68.9742,2,"2026-07-21 13:00:00","2026-07-21 16:00:00",in_transit
+Diego Jiménez,"Calle Mar 66, La Romana",18.4338,-68.9741,1,"2026-07-22 14:00:00","2026-07-22 18:00:00",pending
+Valeria Paredes,"Boulevard Coral 44, Santiago",19.4584,-70.6969,3,"2026-07-23 10:00:00","2026-07-23 13:00:00",delivered
+Fernando Ramírez,"Calle Laurel 66, Puerto Plata",19.7905,-70.6870,4,"2026-07-24 07:30:00","2026-07-24 12:30:00",pending
+Mariana Torres,"Avenida Mar 88, Santo Domingo",18.4340,-68.9743,5,"2026-07-25 09:00:00","2026-07-25 12:00:00",in_transit
+Javier Paredes,"Boulevard Coral 55, Santiago",19.4589,-70.6987,2,"2026-07-26 08:00:00","2026-07-26 10:30:00",pending
+Lucía Díaz,"Calle Almendro 77, La Romana",18.4336,-68.9740,1,"2026-07-27 13:00:00","2026-07-27 16:00:00",delivered
+Diego Fernández,"Boulevard Laurel 55, Puerto Plata",19.7902,-70.6868,3,"2026-07-28 14:00:00","2026-07-28 18:00:00",pending
+Patricia Torres,"Avenida Sol 88, Santo Domingo",18.4338,-68.9741,4,"2026-07-29 10:00:00","2026-07-29 13:00:00",in_transit
+Fernando Díaz,"Calle Mar 77, La Romana",18.4337,-68.9742,5,"2026-07-30 07:30:00","2026-07-30 11:30:00",pending
+Mariana Fernández,"Boulevard Coral 66, Santiago",19.4585,-70.6983,2,"2026-07-31 09:00:00","2026-07-31 12:00:00",delivered
+Javier Morales,"Calle Laurel 77, Puerto Plata",19.7901,-70.6867,1,"2026-08-01 08:00:00","2026-08-01 10:30:00",pending
+Lucía Jiménez,"Avenida Mar 99, Santo Domingo",18.4340,-68.9742,3,"2026-08-02 13:00:00","2026-08-02 16:00:00",pending
+Diego Paredes,"Calle Almendro 88, La Romana",18.4338,-68.9740,4,"2026-08-03 14:00:00","2026-08-03 18:00:00",in_transit
+Valeria Torres,"Boulevard Coral 66, Santiago",19.4587,-70.6984,5,"2026-08-04 10:00:00","2026-08-04 13:00:00",pending
+Fernando Jiménez,"Calle Laurel 88, Puerto Plata",19.7903,-70.6872,2,"2026-08-05 07:30:00","2026-08-05 12:30:00",delivered
+Marcos Torres,"Avenida Sol 101, Santo Domingo",18.4342,-68.9741,3,"2026-08-06 09:00:00","2026-08-06 12:00:00",pending
+Lucía Fernández,"Boulevard Coral 77, Santiago",19.4589,-70.6986,2,"2026-08-07 08:00:00","2026-08-07 10:30:00",in_transit
+Diego Jiménez,"Calle Almendro 99, La Romana",18.4339,-68.9743,1,"2026-08-08 13:00:00","2026-08-08 16:00:00",delivered
+Valeria Paredes,"Boulevard Laurel 101, Puerto Plata",19.7904,-70.6870,4,"2026-08-09 14:00:00","2026-08-09 18:00:00",pending
+Fernando Ramírez,"Avenida Mar 111, Santo Domingo",18.4340,-68.9742,5,"2026-08-10 10:00:00","2026-08-10 13:00:00",in_transit
+Mariana Torres,"Calle Sol 102, La Romana",18.4338,-68.9741,2,"2026-08-11 07:30:00","2026-08-11 11:30:00",pending
+Javier Paredes,"Boulevard Coral 88, Santiago",19.4586,-70.6985,3,"2026-08-12 09:00:00","2026-08-12 12:00:00",delivered
+Lucía Díaz,"Calle Laurel 102, Puerto Plata",19.7902,-70.6869,1,"2026-08-13 08:00:00","2026-08-13 10:30:00",pending
+Diego Fernández,"Avenida Sol 112, Santo Domingo",18.4341,-68.9743,4,"2026-08-14 13:00:00","2026-08-14 16:00:00",in_transit
+Patricia Torres,"Calle Mar 103, La Romana",18.4337,-68.9742,5,"2026-08-15 14:00:00","2026-08-15 18:00:00",pending
+Fernando Díaz,"Boulevard Coral 99, Santiago",19.4585,-70.6984,2,"2026-08-16 10:00:00","2026-08-16 13:00:00",delivered
+Mariana Fernández,"Calle Laurel 103, Puerto Plata",19.7901,-70.6871,1,"2026-08-17 07:30:00","2026-08-17 12:30:00",pending
+Javier Morales,"Avenida Mar 122, Santo Domingo",18.4340,-68.9740,3,"2026-08-18 09:00:00","2026-08-18 12:00:00",in_transit
+Lucía Jiménez,"Boulevard Coral 101, Santiago",19.4584,-70.6982,4,"2026-08-19 08:00:00","2026-08-19 10:30:00",pending
+Diego Paredes,"Calle Almendro 112, La Romana",18.4338,-68.9743,5,"2026-08-20 13:00:00","2026-08-20 16:00:00",delivered
+Valeria Torres,"Boulevard Laurel 112, Puerto Plata",19.7903,-70.6870,2,"2026-08-21 14:00:00","2026-08-21 18:00:00",pending
+Fernando Jiménez,"Avenida Sol 123, Santo Domingo",18.4342,-68.9741,1,"2026-08-22 10:00:00","2026-08-22 13:00:00",in_transit
+Marcos Torres,"Calle Mar 114, La Romana",18.4339,-68.9740,3,"2026-08-23 07:30:00","2026-08-23 11:30:00",pending
