@@ -4,10 +4,10 @@ import tkinter as tk
 
 # -------- Paths --------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-LOGO_PATH = os.path.join(BASE_DIR, "c15be2c62961ad37577a4ae17af24c1c.jpg")  # coloca tu logo aquí
+LOGO_PATH = os.path.join(BASE_DIR, "routes_and_logistics_logo.png")  # coloca tu logo aquí
 
 # -------- Functions to load images --------
-def load_logo(width=100, height=100, bg_color="#2c3e50"):
+def load_logo(width=110, height=110, bg_color="#f5f5f5"):
     """Load and resize the logo image, return a Tkinter Label"""
     if not os.path.exists(LOGO_PATH):
         raise FileNotFoundError(f"Logo not found at {LOGO_PATH}")

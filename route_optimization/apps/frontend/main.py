@@ -15,10 +15,10 @@ class MainApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Route and Logistics OA by JohnPSCodes")
-        self.geometry("1235x600")
-        self.minsize(1235, 600)
-        self.maxsize(1235, 600)
-        self.config(bg="#f0f0f0")
+        self.geometry("1280x600")
+        self.minsize(1280, 600)
+        self.maxsize(1280, 600)
+        self.config(bg="#f5f5f5")
 
         # --------- MenuBar --------
         MenuBar(self)
@@ -29,7 +29,7 @@ class MainApp(tk.Tk):
         self.grid_rowconfigure(1, weight=0)  # Footer (status bar)
 
         # ------- SidePanel ------------
-        sidepanel = tk.Frame(self, bg="#2c3e50", width=150)
+        sidepanel = tk.Frame(self, bg="#f5f5f5", width=150)
         sidepanel.grid(row=0, column=0, sticky="ns")
         sidepanel.grid_propagate(False)
 
@@ -38,11 +38,11 @@ class MainApp(tk.Tk):
         sidepanel.grid_columnconfigure(0, weight=1)
 
         # ------- Logo ----------
-        logo_label = load_logo(width=100, height=100)
-        logo_label.grid(row=0, column=0, pady=(10), sticky="n")
+        logo_label = load_logo(width=150, height=150)
+        logo_label.grid(row=0, column=0, pady=(1),padx=(5), sticky="n")
 
         # ------- Navigation Buttons ----------
-        buttons_frame = tk.Frame(sidepanel, bg="#2c3e50")
+        buttons_frame = tk.Frame(sidepanel, bg="#f5f5f5")
         buttons_frame.grid(row=1, column=0, sticky="n", pady=(410, 5))
         buttons_frame.grid_columnconfigure(0, weight=1)
 
@@ -56,10 +56,10 @@ class MainApp(tk.Tk):
 
         for i, (text, frame_name) in enumerate(buttons):
             btn = ttk.Button(buttons_frame, text=text, command=lambda f=frame_name: self.show_frame(f))
-            btn.grid(row=i, column=0, sticky="ew", pady=(5, 0), padx=10)
+            btn.grid(row=i, column=0, sticky="ew", pady=(5, 0))
 
         # ------- Views Container ----------
-        container = tk.Frame(self, bg="#f0f0f0")
+        container = tk.Frame(self, bg="#ffffff")
         container.grid(row=0, column=1, sticky="nsew")
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
@@ -76,10 +76,10 @@ class MainApp(tk.Tk):
         status_frame.grid(row=1, column=0, columnspan=2, sticky="ew")
 
         # 3 secciones: izquierda, centro, derecha
-        self.user_label = tk.Label(status_frame, text="Usuario: Johnpscodes", bg="#2c3e50", fg="white", anchor="w", padx=10)
+        self.user_label = tk.Label(status_frame, text="User: Johnpscodes", bg="#2c3e50", fg="white", anchor="w", padx=10)
         self.user_label.pack(side="left")
 
-        self.connection_label = tk.Label(status_frame, text="Conectado ✅", bg="#2c3e50", fg="white")
+        self.connection_label = tk.Label(status_frame, text="Connected ✅", bg="#2c3e50", fg="white")
         self.connection_label.pack(side="left", padx=20)
 
         self.version_label = tk.Label(status_frame, text="Versión 1.0.0", bg="#2c3e50", fg="white")
