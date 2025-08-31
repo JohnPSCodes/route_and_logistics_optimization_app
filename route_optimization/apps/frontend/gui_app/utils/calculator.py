@@ -2,9 +2,9 @@ import tkinter as tk
 from apps.frontend.gui_app.utils.windows_utils import center_window
 
 class Calculator:
-    BUTTON_BG = "#4CAF50"
+    BUTTON_BG = "#2c3e50"
     BUTTON_FG = "#FFFFFF"
-    OP_BG = "#FF9800"
+    OP_BG = "#36373A"
     OP_FG = "#FFFFFF"
     ENTRY_BG = "#ECECEC"
     ENTRY_FG = "#333"
@@ -51,7 +51,7 @@ class Calculator:
                 bg_color = self.OP_BG
                 fg_color = self.OP_FG
             elif text in ('C', '⌫'):
-                bg_color = "#F44336"  # Rojo para borrar
+                bg_color = "#E7901F"  # Rojo para borrar
                 fg_color = "#FFFFFF"
             else:
                 bg_color = self.BUTTON_BG
