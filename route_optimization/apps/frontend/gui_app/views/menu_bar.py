@@ -20,7 +20,7 @@ class MenuBar:
         # Utilities Menu
         utilities_menu = tk.Menu(menu_bar, tearoff=0)
         utilities_menu.add_command(label="Calculator", command=lambda: Calculator(self.master))
-        utilities_menu.add_command(label="Unit Converter", command=self.unit_converter)
+        utilities_menu.add_command(label="Drivers", command=self.drivers_management)
 
         # Help Menu
         help_menu = tk.Menu(menu_bar, tearoff=0)
@@ -57,5 +57,5 @@ class MenuBar:
     def show_option(self, option_name):
         messagebox.showinfo(option_name, f"{option_name} selected.")
 
-    def unit_converter(self):
-        messagebox.showinfo("Unit Converter", "Coming soon!")
+    def drivers_management(self):
+        messagebox.showinfo("Drivers", "Coming soon!")
