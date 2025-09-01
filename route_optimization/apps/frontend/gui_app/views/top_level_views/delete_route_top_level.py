@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 from apps.backend.services.routes import get_route, delete_route
@@ -6,7 +5,7 @@ from apps.frontend.gui_app.utils.windows_utils import center_window
 
 class DeleteRouteTopLevel(tk.Toplevel):
     """
-    Toplevel para confirmar la eliminación de una ruta.
+    Toplevel window to confirm the deletion of a route.
     """
     def __init__(self, parent, route_id: int, refresh_callback=None):
         super().__init__(parent)
