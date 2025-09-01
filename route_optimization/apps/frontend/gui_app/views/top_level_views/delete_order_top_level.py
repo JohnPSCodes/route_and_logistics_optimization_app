@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 import requests
@@ -8,8 +7,8 @@ from apps.frontend.gui_app.utils.windows_utils import center_window
 class DeleteOrderTopLevel(tk.Toplevel):
     def __init__(self, parent, order_data, callback):
         """
-        order_data: dict con los campos de la orden a eliminar
-        callback: función para refrescar Treeview
+        order_data: dict with the fields of the order to delete
+        callback: function to refresh the Treeview
         """
         super().__init__(parent)
         self.callback = callback
@@ -20,11 +19,11 @@ class DeleteOrderTopLevel(tk.Toplevel):
         self.resizable(False, False)
         center_window(self)
 
-        # Mensaje de confirmación
+        # Confirmation message
         msg = f"Are you sure you want to delete Order {self.order_id}?\nCustomer: {order_data.get('customer_name')}"
         tk.Label(self, text=msg, wraplength=300, justify="center").pack(pady=30)
 
-        # Botones
+        # Buttons
         btn_frame = tk.Frame(self)
         btn_frame.pack(pady=10)
 
@@ -37,7 +36,7 @@ class DeleteOrderTopLevel(tk.Toplevel):
             response = requests.delete(f"{API_URL_ORDERS}{self.order_id}/", headers=headers, timeout=5)
             if response.status_code in (200, 204):
                 messagebox.showinfo("Deleted", f"Order {self.order_id} has been deleted.")
-                self.callback()  # refresca Treeview del frame padre
+                self.callback()  # refresh Treeview in parent frame
                 self.destroy()
             else:
                 messagebox.showerror("Error", f"Error deleting order: {response.status_code}")
