@@ -87,14 +87,14 @@ class RoutesFrame(tk.Frame):
         buttons_container.grid(row=4, column=0, sticky="ew", padx=10, pady=10)
         buttons_container.grid_columnconfigure((0,1,2), weight=1)
 
-        ttk.Button(buttons_container, text="Add waypoint(stop)", command=self.add_waypoint).grid(row=0, column=0, padx=5, pady=5, sticky="ew")
-        ttk.Button(buttons_container, text="Delete waypoint(stop)", command=self.delete_waypoint).grid(row=0, column=1, padx=5, pady=5, sticky="ew")
-        ttk.Button(buttons_container, text="Load route", command=self.load_route).grid(row=0, column=2, padx=5, pady=5, sticky="ew")
-        ttk.Button(buttons_container, text="See all routes", command=self.see_all_routes).grid(row=1, column=0, padx=5, pady=5, sticky="ew")
+        ttk.Button(buttons_container, text="Add Waypoint", command=self.add_waypoint).grid(row=0, column=0, padx=5, pady=5, sticky="ew")
+        ttk.Button(buttons_container, text="Delete Waypoint", command=self.delete_waypoint).grid(row=0, column=1, padx=5, pady=5, sticky="ew")
+        ttk.Button(buttons_container, text="Load Route", command=self.load_route).grid(row=0, column=2, padx=5, pady=5, sticky="ew")
+        ttk.Button(buttons_container, text="See All Routes", command=self.see_all_routes).grid(row=1, column=0, padx=5, pady=5, sticky="ew")
         ttk.Button(buttons_container, text="Edit Stop", command=self.edit_stop).grid(row=1, column=1, padx=5, pady=5, sticky="ew")
-        ttk.Button(buttons_container, text="Assign route", command=self.assign_route).grid(row=1, column=2, padx=5, pady=5, sticky="ew")
+        ttk.Button(buttons_container, text="Assign Route", command=self.assign_route).grid(row=1, column=2, padx=5, pady=5, sticky="ew")
 
-        # Cargar primer route si existe
+        # Load first route if available
         if self.routes:
             self.current_route_id = self.route_map[list(self.route_map.keys())[0]]
             self.refresh_all()
@@ -195,7 +195,7 @@ class RoutesFrame(tk.Frame):
         try:
             webbrowser.open_new_tab(url)
         except Exception as e:
-            messagebox.showerror("Error", f"No se pudo abrir Google Maps: {e}")
+            messagebox.showerror("Error", f"Could not open Google Maps: {e}")
 
     def see_all_routes(self):
         SeeAllRoutesTopLevel(self)
@@ -203,7 +203,6 @@ class RoutesFrame(tk.Frame):
     def assign_route(self):
         AssignRouteTopLevel(self)
     
-
     def edit_stop(self):
         if self.current_route_id is None:
             messagebox.showwarning("Warning", "Please select a route first.")
