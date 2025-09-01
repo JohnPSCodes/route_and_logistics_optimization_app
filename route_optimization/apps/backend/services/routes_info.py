@@ -12,14 +12,14 @@ def get_route_driver(route_id):
             return route.driver.user.name
     except Route.DoesNotExist:
         pass
-    return "No asignado"
+    return "unassigned"
 
 def get_route_stats(route_id):
     stops = get_route_stops(route_id)
     total_stops = len(stops)
     completed_stops = sum(1 for s in stops if s.delivered)
 
-    # Solo las paradas pendientes se consideran para el cálculo de la ruta
+    # Only pending stops are considered for route calculation
     pending_stops = [s for s in stops if not s.delivered]
 
     locations = [(s.order.latitude, s.order.longitude) for s in pending_stops]
@@ -31,8 +31,8 @@ def get_route_stats(route_id):
 
 def get_route_duration_and_distance(locations):
     """
-    Calcula duración y distancia usando Google Directions API.
-    Considera el orden de las paradas pendientes.
+    Calculates duration and distance using Google Directions API.
+    Considers the order of pending stops.
     """
     if len(locations) < 2:
         return {"duration_min": 0, "distance_km": 0, "duration_str": "0h 0m"}

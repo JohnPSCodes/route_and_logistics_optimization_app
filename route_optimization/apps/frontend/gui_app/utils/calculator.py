@@ -22,7 +22,7 @@ class Calculator:
         self.calc_window.resizable(False, False)
         center_window(self.calc_window)
 
-        # Entrada de resultados
+        # Result input
         self.entry = tk.Entry(
             self.calc_window,
             width=16,
@@ -39,7 +39,7 @@ class Calculator:
 
     def create_buttons(self):
         buttons = [
-            ('C', 1, 0), ('⌫', 1, 1), ('%', 1, 2), ('/', 1, 3),
+            ('C', 1, 0), ('Del', 1, 1), ('%', 1, 2), ('/', 1, 3),
             ('7', 2, 0), ('8', 2, 1), ('9', 2, 2), ('*', 2, 3),
             ('4', 3, 0), ('5', 3, 1), ('6', 3, 2), ('-', 3, 3),
             ('1', 4, 0), ('2', 4, 1), ('3', 4, 2), ('+', 4, 3),
@@ -50,8 +50,8 @@ class Calculator:
             if text in '+-*/=%':
                 bg_color = self.OP_BG
                 fg_color = self.OP_FG
-            elif text in ('C', '⌫'):
-                bg_color = "#E7901F"  # Rojo para borrar
+            elif text in ('C', 'Del'):
+                bg_color = "#E7901F"  # Orange for delete
                 fg_color = "#FFFFFF"
             else:
                 bg_color = self.BUTTON_BG
@@ -65,12 +65,12 @@ class Calculator:
                 font=self.FONT_BUTTON,
                 bg=bg_color,
                 fg=fg_color,
-                activebackground="#D32F2F" if text in ('C', '⌫') else "#388E3C",
+                activebackground="#D32F2F" if text in ('C', 'Del') else "#388E3C",
                 command=lambda val=text: self.click_button(val)
             )
             b.grid(row=row, column=col, padx=5, pady=5, sticky="nsew")
 
-        # Expandir botones
+        # Expand buttons
         for i in range(6):
             self.calc_window.rowconfigure(i, weight=1)
         for i in range(4):
@@ -86,8 +86,8 @@ class Calculator:
                 self.entry.delete(0, tk.END)
                 self.entry.insert(tk.END, "Error")
         elif value == "C":
-            self.entry.delete(0, tk.END)  # Borra todo
-        elif value == "⌫":
-            self.entry.delete(len(self.entry.get())-1, tk.END)  # Borra último carácter
+            self.entry.delete(0, tk.END)  # Clear all
+        elif value == "Del":
+            self.entry.delete(len(self.entry.get())-1, tk.END)  # Delete last character
         else:
             self.entry.insert(tk.END, value)
