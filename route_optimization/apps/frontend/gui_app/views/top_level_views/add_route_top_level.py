@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 from tkcalendar import DateEntry
@@ -8,11 +7,11 @@ from apps.frontend.gui_app.utils.windows_utils import center_window
 
 class AddRouteTopLevel(tk.Toplevel):
     """
-    Toplevel para crear una nueva ruta.
+    Toplevel window to create a new route.
 
-    Requiere:
-        - created_by_id (int): ID del usuario creador (FK).
-        - refresh_callback (callable|None): función para refrescar la UI del padre tras guardar.
+    Requires:
+        - created_by_id (int): ID of the user who creates the route (FK).
+        - refresh_callback (callable|None): function to refresh the parent UI after saving.
     """
     STATUSES = ["planned", "in_progress", "completed"]
 
@@ -25,7 +24,7 @@ class AddRouteTopLevel(tk.Toplevel):
         self.refresh_callback = refresh_callback
         center_window(self)
 
-        # Opcional: comportamiento modal
+        # Optional: modal behavior
         self.transient(parent)
         self.grab_set()
 
@@ -52,7 +51,7 @@ class AddRouteTopLevel(tk.Toplevel):
                                          values=self.STATUSES, textvariable=self.var_status)
         self.combo_status.grid(row=2, column=1, sticky="w", padx=(8,0), pady=6)
 
-        # Created by (informativo)
+        # Created by (informative)
         ttk.Label(container, text=f"Created by (user id):").grid(row=3, column=0, sticky="w", pady=6)
         ttk.Label(container, text=str(self.created_by_id)).grid(row=3, column=1, sticky="w", padx=(8,0), pady=6)
 
@@ -68,7 +67,7 @@ class AddRouteTopLevel(tk.Toplevel):
         ttk.Button(btns, text="Save", command=self.save_route).grid(row=0, column=0, sticky="ew", padx=(0,6))
         ttk.Button(btns, text="Cancel", command=self.destroy).grid(row=0, column=1, sticky="ew", padx=(6,0))
 
-        # Focus inicial y binding Enter
+        # Initial focus and Enter binding
         self.entry_name.focus_set()
         self.bind("<Return>", lambda e: self.save_route())
 
@@ -78,7 +77,7 @@ class AddRouteTopLevel(tk.Toplevel):
         planned_date = self.entry_date.get_date()
         status = self.var_status.get()
 
-        # Validaciones básicas
+        # Basic validations
         if not name:
             messagebox.showwarning("Validation", "Route Name is required.")
             self.entry_name.focus_set()
