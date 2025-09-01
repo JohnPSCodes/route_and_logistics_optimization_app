@@ -1,4 +1,4 @@
-# apps/frontend/gui_app/views/top_level_views/edit_order.py
+
 import tkinter as tk
 from tkinter import ttk, messagebox
 from tkcalendar import DateEntry
@@ -11,8 +11,8 @@ from datetime import datetime
 class EditOrderTopLevel(tk.Toplevel):
     def __init__(self, parent, order_data, callback):
         """
-        order_data: dict con los campos de la orden a editar
-        callback: función para refrescar Treeview
+        order_data: dict with the fields of the order to edit
+        callback: function to refresh Treeview
         """
         super().__init__(parent)
         self.callback = callback
@@ -82,13 +82,13 @@ class EditOrderTopLevel(tk.Toplevel):
         self.status_combo.pack(fill="x", padx=10, pady=5)
 
     def submit(self):
-        # Validación mínima
+        # Minimal validation
         try:
             latitude = float(self.lat_entry.get())
             longitude = float(self.lon_entry.get())
             priority = int(self.priority_spin.get())
         except ValueError:
-            messagebox.showerror("Invalid Input", "Latitude, Longitude must be numbers and Priority must be an integer.")
+            messagebox.showerror("Invalid Input", "Latitude and Longitude must be numbers, and Priority must be an integer.")
             return
 
         data = {
@@ -106,7 +106,7 @@ class EditOrderTopLevel(tk.Toplevel):
         try:
             response = requests.put(f"{API_URL_ORDERS}{self.order_id}/", json=data, headers=headers, timeout=5)
             if response.status_code in (200, 204):
-                self.callback()  # refresca Treeview del frame padre
+                self.callback()  # refresh parent frame Treeview
                 self.destroy()
             else:
                 messagebox.showerror("Error", f"Error updating order: {response.status_code}")
