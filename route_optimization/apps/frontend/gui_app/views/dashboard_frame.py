@@ -1,9 +1,8 @@
-# dashboard_frame.py
 import tkinter as tk
 from tkinter import ttk, messagebox
 import webbrowser
 
-# Integra con tus servicios existentes:
+# Integrates with your existing services
 from apps.backend.services.routes import get_all_route
 from apps.backend.services.stops import get_route_stops
 from apps.backend.services.routes_info import get_full_route_info, get_route_driver
@@ -21,7 +20,7 @@ class DashboardFrame(tk.Frame):
         self.map_img_tk = None
 
         # --- Layout grid ---
-        self.grid_rowconfigure(2, weight=1)   # centro (tabla + detalle) crece
+        self.grid_rowconfigure(2, weight=1)   # center (table + detail) grows
         self.grid_columnconfigure(0, weight=1)
 
         # --- Title ---
@@ -29,7 +28,7 @@ class DashboardFrame(tk.Frame):
             row=0, column=0, sticky="w", padx=12, pady=(10, 6)
         )
 
-        # --- KPI cards (fila superior) ---
+        # --- KPI cards (top row) ---
         kpis = tk.Frame(self, bg="white")
         kpis.grid(row=1, column=0, sticky="ew", padx=12, pady=(0, 8))
         for i in range(4):
@@ -47,14 +46,14 @@ class DashboardFrame(tk.Frame):
         self._make_kpi(kpis, 2, "In Progress", self.kpi_vars["in_progress"])
         self._make_kpi(kpis, 3, "Completed", self.kpi_vars["completed"])
 
-        # --- Centro: tabla + detalle ---
+        # --- Center: table + detail ---
         center = tk.Frame(self, bg="white")
         center.grid(row=2, column=0, sticky="nsew", padx=12, pady=8)
         center.grid_columnconfigure(0, weight=3)
         center.grid_columnconfigure(1, weight=2)
         center.grid_rowconfigure(0, weight=1)
 
-        # Tabla de rutas (izquierda)
+        # Routes table (left)
         left = tk.Frame(center, bg="white")
         left.grid(row=0, column=0, sticky="nsew", padx=(0, 8))
         left.grid_rowconfigure(1, weight=1)
@@ -80,7 +79,7 @@ class DashboardFrame(tk.Frame):
 
         self.routes_tv.bind("<<TreeviewSelect>>", self.on_route_select)
 
-        # Panel de detalle (derecha) con info + mini-mapa
+        # Detail panel (right) with info + mini-map
         right = tk.Frame(center, bg="white", bd=1, relief="solid")
         right.grid(row=0, column=1, sticky="nsew")
         right.grid_columnconfigure(0, weight=1)
@@ -113,12 +112,12 @@ class DashboardFrame(tk.Frame):
         self._row(info, 5, "Distance:", self.detail_vars["distance"])
         self._row(info, 6, "Duration:", self.detail_vars["duration"])
 
-        # Mini-mapa
+        # Mini-map
         self.map_canvas = tk.Canvas(right, bg="#f2f2f2", height=220, highlightthickness=0)
         self.map_canvas.grid(row=3, column=0, sticky="nsew", padx=10, pady=10)
         self.map_canvas.bind("<Configure>", lambda e: self._redraw_map())
 
-        # Botones de acción rápida
+        # Quick action buttons
         actions = tk.Frame(right, bg="white")
         actions.grid(row=4, column=0, sticky="ew", padx=10, pady=(0, 10))
         actions.grid_columnconfigure((0, 1), weight=1)
@@ -129,7 +128,7 @@ class DashboardFrame(tk.Frame):
             row=0, column=1, sticky="ew", padx=(6, 0)
         )
 
-        # --- Inicial ---
+        # --- Initial load ---
         self.refresh_all()
 
     # ---------------- Helpers UI ----------------
@@ -150,7 +149,7 @@ class DashboardFrame(tk.Frame):
 
     # ---------------- Data refresh ----------------
     def refresh_all(self):
-        """Recarga KPIs, tabla de rutas y limpia detalle/mapa si no hay selección."""
+        """Reload KPIs, routes table and clear detail/map if nothing selected."""
         try:
             routes = get_all_route()
         except Exception as e:
@@ -168,13 +167,13 @@ class DashboardFrame(tk.Frame):
         self.kpi_vars["in_progress"].set(str(in_progress))
         self.kpi_vars["completed"].set(str(completed))
 
-        # Tabla
+        # Table
         for iid in self.routes_tv.get_children():
             self.routes_tv.delete(iid)
         self.route_rows.clear()
 
         for r in routes:
-            # Driver (rápido, sin API de distancia)
+            # Driver
             try:
                 driver_name = get_route_driver(r.id) or "Unassigned"
             except Exception:
@@ -199,7 +198,7 @@ class DashboardFrame(tk.Frame):
             iid = self.routes_tv.insert("", "end", values=values)
             self.route_rows[iid] = r.id
 
-        # Limpia detalle si no hay selección
+        # Clear detail if nothing selected
         if not self.routes_tv.selection():
             self._clear_detail()
 
@@ -209,7 +208,7 @@ class DashboardFrame(tk.Frame):
         self._clear_map()
 
     # ---------------- Selection handlers ----------------
-    def on_route_select(self, _event=None): 
+    def on_route_select(self, _event=None):
         sel = self.routes_tv.selection()
         if not sel:
             self._clear_detail()
@@ -220,7 +219,7 @@ class DashboardFrame(tk.Frame):
             self._clear_detail()
             return
 
-        # Info detallada (usa Distance Matrix dentro de get_full_route_info)
+        # Detailed info
         try:
             info = get_full_route_info(route_id)
         except Exception as e:
@@ -228,7 +227,6 @@ class DashboardFrame(tk.Frame):
             self._clear_detail()
             return
 
-        # Actualiza labels
         vals = self.routes_tv.item(iid, "values")
         self.detail_vars["name"].set(vals[0] if vals else "—")
         self.detail_vars["status"].set(vals[2] if len(vals) > 2 else "—")
@@ -237,21 +235,13 @@ class DashboardFrame(tk.Frame):
         self.detail_vars["completed"].set(str(info.get("completed_stops", 0)))
         self.detail_vars["distance"].set(f"{info.get('distance_km', 0)} km")
 
-        # Obtiene la duración en minutos (puede ser float)
-        duration_min = info.get("duration_min", 0)
-
-        # Convierte a entero
-        duration_min = int(duration_min)
-
-        # Convierte a horas y minutos
+        # Duration in minutes
+        duration_min = int(info.get("duration_min", 0))
         hours = duration_min // 60
         minutes = duration_min % 60
+        self.detail_vars["duration"].set(f"{hours:02d}h {minutes:02d}m")
 
-        # Formatea como "HHh MMm"
-        dur_str = f"{hours:02d}h {minutes:02d}m"
-        self.detail_vars["duration"].set(dur_str)
-
-        # Mini-mapa
+        # Mini-map
         self._draw_map_for_route(route_id)
 
     # ---------------- Mini-map ----------------
@@ -260,7 +250,6 @@ class DashboardFrame(tk.Frame):
         self.map_img_tk = None
 
     def _redraw_map(self):
-        # Re-dibuja el mapa si hay selección
         sel = self.routes_tv.selection()
         if sel:
             route_id = self.route_rows.get(sel[0])
@@ -268,7 +257,6 @@ class DashboardFrame(tk.Frame):
                 self._draw_map_for_route(route_id)
 
     def _draw_map_for_route(self, route_id):
-        # Obtiene paradas y pinta un static map en el canvas derecho
         try:
             stops = get_route_stops(route_id)
         except Exception:
@@ -318,11 +306,10 @@ class DashboardFrame(tk.Frame):
             )
 
     def _open_selected_in_maps(self):
-        """Reutilizamos el nuevo método load_route para abrir la ruta."""
+        """Open the currently selected route in Google Maps."""
         self.load_route()
 
     def load_route(self):
-        """Abre Google Maps con la ruta actualmente seleccionada."""
         sel = self.routes_tv.selection()
         if not sel:
             messagebox.showwarning("Warning", "Please select a route first.")
@@ -353,4 +340,4 @@ class DashboardFrame(tk.Frame):
         try:
             webbrowser.open_new_tab(url)
         except Exception as e:
-            messagebox.showerror("Error", f"No se pudo abrir Google Maps: {e}")
+            messagebox.showerror("Error", f"Could not open Google Maps: {e}")
