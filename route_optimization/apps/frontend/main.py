@@ -23,7 +23,7 @@ class MainApp(tk.Tk):
         # --------- MenuBar --------
         MenuBar(self)
 
-        # Configuración de la cuadrícula principal
+        # Main cuadricule configuration
         self.grid_columnconfigure(1, weight=1)
         self.grid_rowconfigure(0, weight=1)
         self.grid_rowconfigure(1, weight=0)  # Footer (status bar)
@@ -75,7 +75,7 @@ class MainApp(tk.Tk):
         status_frame = tk.Frame(self, bg="#2c3e50")
         status_frame.grid(row=1, column=0, columnspan=2, sticky="ew")
 
-        # 3 secciones: izquierda, centro, derecha
+        # 3 Sections: Left, Center, Right
         self.user_label = tk.Label(status_frame, text="User: Johnpscodes", bg="#2c3e50", fg="white", anchor="w", padx=10)
         self.user_label.pack(side="left")
 
@@ -88,7 +88,7 @@ class MainApp(tk.Tk):
         self.clock_label = tk.Label(status_frame, text="", bg="#2c3e50", fg="white", anchor="e", padx=10)
         self.clock_label.pack(side="right")
 
-        self.update_clock()  # Inicia el reloj
+        self.update_clock()  # Starts the clock
 
         # Default frame
         self.show_frame("DashboardFrame")
@@ -101,7 +101,7 @@ class MainApp(tk.Tk):
     def update_clock(self):
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self.clock_label.config(text=now)
-        self.after(1000, self.update_clock)  # Actualiza cada segundo
+        self.after(1000, self.update_clock)  # Update per second
 
 
 if __name__ == "__main__":
