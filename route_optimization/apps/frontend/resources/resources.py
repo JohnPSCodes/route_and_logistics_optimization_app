@@ -4,7 +4,7 @@ import tkinter as tk
 
 # -------- Paths --------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-LOGO_PATH = os.path.join(BASE_DIR, "routes_and_logistics_logo.png")  # coloca tu logo aquí
+LOGO_PATH = os.path.join(BASE_DIR, "routes_and_logistics_logo.png")  # logo goes here
 
 # -------- Functions to load images --------
 def load_logo(width=110, height=110, bg_color="#f5f5f5"):
