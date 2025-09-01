@@ -1,18 +1,20 @@
-# resources/google_maps.py
+
 import requests
 from PIL import Image, ImageTk
 from io import BytesIO
 
 def get_static_map(center, zoom=12, size=(600,400), markers=None, path=None, api_key=None, scale=1):
     """
-    Devuelve un mapa estático de Google Maps como ImageTk.PhotoImage
-    - center: "lat,lng" del centro del mapa
-    - zoom: nivel de zoom
-    - size: tuple (width, height)
-    - markers: lista de tuplas [(lat,lng),...]
-    - path: string "lat1,lng1|lat2,lng2|..." para dibujar ruta
-    - api_key: tu Google API key
-    - scale: escala del mapa
+    Returns a Google Maps static map as an ImageTk.PhotoImage.
+
+    Parameters:
+    - center: string "lat,lng" for the map center
+    - zoom: zoom level (integer)
+    - size: tuple (width, height) in pixels
+    - markers: list of tuples [(lat, lng), ...] for map markers
+    - path: string "lat1,lng1|lat2,lng2|..." to draw a route line
+    - api_key: your Google API key
+    - scale: map scale (1 or 2)
     """
     base_url = "https://maps.googleapis.com/maps/api/staticmap?"
     
