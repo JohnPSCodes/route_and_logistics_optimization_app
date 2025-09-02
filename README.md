@@ -32,19 +32,19 @@ Built as a **Minimum Viable Product (MVP)** demonstrating secure APIs, database 
 ![Login](demo_assets/login_examples.gif)
 
 #### Main Dashboard
-![Main Dashboard](routes_and_main_dashboard_test_johnpscodes_app.gif)
+![Main Dashboard](demo_assets/routes_and_main_dashboard_test_johnpscodes_app.gif)
 
 #### Routes CRUD
-![Routes](routes_testing_example_johnpscodes_app.gif)
+![Routes](demo_assets/routes_testing_example_johnpscodes_app.gif)
 
 #### Routes on GOOGLE MAPS
-![Maps](maps_loading_example_johnpscodes_app.gif)
+![Maps](demo_assets/maps_loading_example_johnpscodes_app.gif)
 
 #### Orders CRUD
-![Orders](orders_management_and_user_config_example_johnpsco.gif)
+![Orders](demo_assets/orders_management_and_user_config_example_johnpsco.gif)
 
 #### Utils
-![Calculator](calculator_example_johnpscodes_app.gif)
+![Calculator](demo_assets/calculator_example_johnpscodes_app.gif)
 
 ---
 
