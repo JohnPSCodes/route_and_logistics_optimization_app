@@ -78,7 +78,7 @@ During development of this MVP:
 ### 📇 Contact
 
 - **GitHub**: [JohnPSCodes](https://github.com/JohnPSCodes)  
-- **LinkedIn**: [Johander Pache Sanchez](https://linkedin.com/in/JohanderPacheSanchez)  
+- **LinkedIn**: [Johander Pache Sanchez](https://www.linkedin.com/in/johander-pache-sanchez-b2b314371/)  
 - **Email**: johnpscodes11@gmail.com  
 
 ---
