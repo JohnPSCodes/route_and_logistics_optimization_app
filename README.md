@@ -28,11 +28,23 @@ Built as a **Minimum Viable Product (MVP)** demonstrating secure APIs, database 
 ---
 
 ## 🖼️ Demo
-#### 1. Login
+#### Login
 ![Login](demo_assets/login_examples.gif)
 
-2. Route optimization with Google Directions API.  
-3. GUI functionality (CRUD operations, dataset management, route visualization).  
+#### Main Dashboard
+![Main Dashboard](routes_and_main_dashboard_test_johnpscodes_app.gif)
+
+#### Routes CRUD
+![Routes](routes_testing_example_johnpscodes_app.gif)
+
+#### Routes on GOOGLE MAPS
+![Maps](maps_loading_example_johnpscodes_app.gif)
+
+#### Orders CRUD
+![Orders](orders_management_and_user_config_example_johnpsco.gif)
+
+#### Utils
+![Calculator](calculator_example_johnpscodes_app.gif)
 
 ---
 
